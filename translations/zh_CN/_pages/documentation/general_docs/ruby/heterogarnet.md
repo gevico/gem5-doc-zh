@@ -7,8 +7,8 @@ permalink: /documentation/general_docs/ruby/heterogarnet/
 author: Srikant Bharadwaj
 ---
 
-**gem5 Ruby 互连网络的更多细节见[此处](/documentation/general_docs/ruby/interconnection-network "wikilink")。**
-**较早 Garnet 版本的细节见[此处](/documentation/general_docs/ruby/garnet-2 "wikilink")。**
+**gem5 Ruby 互连网络的更多细节见[此处]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network "wikilink")。**
+**较早 Garnet 版本的细节见[此处]({{ site.baseurl }}/documentation/general_docs/ruby/garnet-2 "wikilink")。**
 
 ### HeteroGarnet：面向多样化互连系统的详细模拟器
 [HeteroGarnet](https://doi.org/10.1109/DAC18072.2020.9218539) 在广受欢迎的 Garnet 2.0 网络模型基础上加以改进，支持对新兴互连系统进行准确模拟。具体来说，HeteroGarnet 增加了对时钟域孤岛（clock-domain island）、支持多个频率域的网络交叉（network crossing）以及可连接多条物理链路的网络接口控制器的支持。它还通过引入新的可配置串行器-解串器（Serializer-Deserializer）组件，支持可变带宽的链路与路由器。HeteroGarnet 以 Garnet 3.0 的形式集成到 gem5 仓库中。
@@ -83,7 +83,7 @@ Garnet 中的物理链路模型表示互连导线本身。一条链路是单个�
 ## 串行器-解串器单元
 在建模 SoC 与异构体系结构时，另一项关键特性是支持系统中不同的互连宽度。考虑 GPU 内两个路由器之间的一条链路，以及内存控制器与片上内存之间的一条链路。这两条链路可能宽度不同。为支持这种配置，Garnet 3.0 引入了如下图所示的串行器-解串器单元，它在位宽边界处把 flit 转换为合适的宽度。这些 SerDes 单元与上一小节描述的 CDC 单元类似，可以实例化在 Garnet 3.0 拓扑中的任何位置。
 
-![SerDes_CDC.png](/assets/img/SerDes_CDC.png)
+![SerDes_CDC.png]({{ site.baseurl }}/assets/img/SerDes_CDC.png)
 
 ## 路由
 路由算法决定 flit 如何在拓扑中传输。路由策略的目标是在最小化竞争的同时最大化互连所提供的带宽。Garnet 3.0 提供了若干标准路由策略供用户选择。
@@ -120,7 +120,7 @@ Garnet 3.0 实现了基于信用的 flit 级流控机制，并支持虚拟通道
 ## Garnet 3.0 中一条消息的一生
 本节描述消息在缓存控制器单元生成之后，在 NoC 中的完整历程。我们以 Garnet 3.0 为例描述该过程，但总体建模原则也可以推广到其他软件模拟/建模工具。
 
-![HeteroGarnet_Life.png](/assets/img/HeteroGarnet_Life.png)
+![HeteroGarnet_Life.png]({{ site.baseurl }}/assets/img/HeteroGarnet_Life.png)
 
 系统的整体流程在上图中详细展示。它展示了一个简单示例场景：一个缓存控制器生成一条发往另一个缓存控制器的消息，二者通过物理链路、串行器-解串器单元和时钟域交叉经由路由器相连。
 

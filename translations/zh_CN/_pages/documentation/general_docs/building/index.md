@@ -334,7 +334,7 @@ Help Options
 
 ## 使用 EXTRAS
 
-可以把 [EXTRAS](/documentation/general_docs/building/EXTRAS) 这个 scons 变量设置为以冒号分隔的路径列表，从而把这些
+可以把 [EXTRAS]({{ site.baseurl }}/documentation/general_docs/building/EXTRAS) 这个 scons 变量设置为以冒号分隔的路径列表，从而把这些
 额外目录中的源文件也编入 gem5。EXTRAS 是一种
 便捷方式，让你能在 gem5 代码库之上进行构建，而不把新源码
 与上游源码混在一起。这样你就可以按需独立于主代码库

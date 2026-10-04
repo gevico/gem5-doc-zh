@@ -3,10 +3,10 @@ layout: default
 ---
 <div class="sidenav-top">
   <div class="sidenav-brand bg-light">
-    <a href="/"><img src="{{ '/assets/img/gem5ColorLong.gif' | prepend: site.baseurl }}" height="55px"></a>
+    <a href="{{ '/' | prepend: site.baseurl }}"><img src="{{ '/assets/img/gem5ColorLong.gif' | prepend: site.baseurl }}" height="55px"></a>
   </div>
   <div class="search">
-    <form action="/search" method="get">
+    <form action="{{ '/search' | prepend: site.baseurl }}" method="get">
       <!-- <label for="search-box"><i class="fa fa-search"></i></label> -->
       <input type="text" name="query">
       <button type="submit" name="submit"><i class="fa fa-search"></i></button>
@@ -14,16 +14,22 @@ layout: default
   </div>
 </div>
 <div class="sidenav">
-  <!-- 导航来自 _data/documentation.yml -->
+  <!-- 导航来自 _data/documentation.yml；以 http(s):// 开头的条目是站外链接，不拼接 baseurl -->
   {% for doc in site.data.documentation.docs %}
     {% if doc.title == page.doc %}
     {% for item in doc.items %}
-      <a class="item" {% if item.url %}href="{{ item.url | prepend: site.baseurl }}"{% else %}data-toggle="collapse" href="#{{ item.id }}"{% endif %} role="button" aria-expanded="false" aria-controls="collapseExample">
+      {% if item.url %}
+        {% if item.url contains '://' %}{% assign item_href = item.url %}{% else %}{% assign item_href = item.url | prepend: site.baseurl %}{% endif %}
+        <a class="item" href="{{ item_href }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+      {% else %}
+        <a class="item" data-toggle="collapse" href="#{{ item.id }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+      {% endif %}
         {{ item.title }}
       </a>
       <div class="collapse {% if page.parent == item.id %}show{% endif %}" id="{{ item.id }}">
         {% for subitem in item.subitems %}
-          <a class="subitem {% if subitem.page == page.title %}active{% endif %}" href="{{ subitem.url | prepend: site.baseurl }}">{{ subitem.page }}</a>
+          {% if subitem.url contains '://' %}{% assign sub_href = subitem.url %}{% else %}{% assign sub_href = subitem.url | prepend: site.baseurl %}{% endif %}
+          <a class="subitem {% if subitem.page == page.title %}active{% endif %}" href="{{ sub_href }}">{{ subitem.page }}</a>
         {% endfor %}
       </div>
     {% endfor %}
@@ -75,10 +81,10 @@ layout: default
   {% endfor %}
   <div class="navbuttons">
     {% if page.previous.url %}
-      <a class="prev" href="{{page.previous.url}}"><button type="button" class="btn btn-outline-primary">上一页</button></a>
+      <a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}"><button type="button" class="btn btn-outline-primary">上一页</button></a>
     {% endif %}
     {% if page.next.url %}
-     <a class="next" href="{{page.next.url}}"><button type="button" class="btn btn-outline-primary">下一页</button></a>
+     <a class="next" href="{{ page.next.url | prepend: site.baseurl }}"><button type="button" class="btn btn-outline-primary">下一页</button></a>
     {% endif %}
   </div>
 </div>

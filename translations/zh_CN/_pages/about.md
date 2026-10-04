@@ -10,7 +10,7 @@ gem5 模拟器（simulator）是一个模块化平台，用于计算机系统体
 
 gem5 是一个开源的计算机体系结构模拟器，在学术界和工业界均有使用。
 它已持续开发 15 年，最初在密歇根大学名为 m5 项目，在威斯康星大学名为 GEMS 项目。
-自 [2011 年 m5 与 GEMS 合并](/publications/#original-paper)以来，gem5 已被超过 [2900 篇论文](https://scholar.google.com/scholar?cites=5769943816602695435)引用。
+自 [2011 年 m5 与 GEMS 合并]({{ site.baseurl }}/publications/#original-paper)以来，gem5 已被超过 [2900 篇论文](https://scholar.google.com/scholar?cites=5769943816602695435)引用。
 许多工业研究实验室都在使用 gem5，包括 ARM Research、AMD Research、Google、Micron、Metempsy、HP、Samsung 等。
 
 ---
@@ -22,14 +22,14 @@ gem5 提供四种基于解释执行的 CPU 模型：一个简单的单 CPI CPU�
 这些 CPU 模型共用同一套高层级的指令集架构（ISA）描述。此外，gem5 还提供一个基于 KVM 的 CPU，利用虚拟化加速模拟（simulation）。
 
 #### 事件驱动（event-driven）的内存系统（memory system）。
-gem5 提供一个详细的、[事件驱动内存系统](/documentation/general_docs/memory_system)，其中包括缓存（cache）、
+gem5 提供一个详细的、[事件驱动内存系统]({{ site.baseurl }}/documentation/general_docs/memory_system)，其中包括缓存（cache）、
 交叉开关、探听过滤器，以及一个快速且精确的 DRAM 控制器模型，用于
 刻画现有及新兴存储器的性能影响，例如 LPDDR3/4/5、DDR3/4、
 GDDR5、HBM1/2/3、HMC、WideIO1/2。这些组件可以灵活组合，
 例如用于建模带有异构存储器的复杂多级非均匀缓存层次结构。
 
 #### 支持多种指令集架构
-gem5 将指令集语义与 CPU 模型解耦，从而能够有效地[支持多种指令集架构](/documentation/general_docs/architecture_support)。目前 gem5 支持 Alpha、ARM、SPARC、MIPS、POWER、RISC-V 和 x86 指令集架构。
+gem5 将指令集语义与 CPU 模型解耦，从而能够有效地[支持多种指令集架构]({{ site.baseurl }}/documentation/general_docs/architecture_support)。目前 gem5 支持 Alpha、ARM、SPARC、MIPS、POWER、RISC-V 和 x86 指令集架构。
 不过，并非所有客户机（guest）平台都能在所有宿主机（host）平台上运行（最典型的是 Alpha 需要小端硬件）。
 
 #### 同构与异构多核
@@ -38,8 +38,8 @@ CPU 模型与缓存可以按任意拓扑组合，构建同构和异构多核系�
 
 #### 全系统（full-system）能力
   - **ARM**：gem5 可以建模 Realview ARM 平台上多达 64 个（异构）核心，并启动
-       [未经修改的 Linux](/documentation/general_docs/fullsystem/building_arm_kernel) 和
-       [Android](/documentation/general_docs/fullsystem/building_android_m)，并可混合使用
+       [未经修改的 Linux]({{ site.baseurl }}/documentation/general_docs/fullsystem/building_arm_kernel) 和
+       [Android]({{ site.baseurl }}/documentation/general_docs/fullsystem/building_android_m)，并可混合使用
        顺序与乱序 CPU。ARM 实现支持
        32 位或 64 位内核与应用程序。
   - **x86**：gem5 模拟器支持标准 PC 平台，可启动未经修改的 Linux
@@ -70,7 +70,7 @@ gem5 的对象按操作系统可见的功耗域和时钟域（clock domain）组
 
 #### 基于跟踪（trace）的 CPU
 该 CPU 模型可以回放弹性跟踪（elastic trace），这些跟踪由挂在乱序 CPU 模型上的探针生成，带有依赖信息与时序标注。
-[跟踪 CPU 模型](/documentation/general_docs/cpu_models/TraceCPU)关注的是以快速且合理精确的方式探索内存系统（缓存层次结构、互连（interconnect）与主存）的性能，而不是使用详细的 CPU 模型。
+[跟踪 CPU 模型]({{ site.baseurl }}/documentation/general_docs/cpu_models/TraceCPU)关注的是以快速且合理精确的方式探索内存系统（缓存层次结构、互连（interconnect）与主存）的性能，而不是使用详细的 CPU 模型。
 
 #### 与 SystemC 协同仿真。
 gem5 可以[被纳入 SystemC 仿真](http://old.gem5.org/wiki/images/4/4c/2015_ws_09_2015-06-14_Gem5_ISCA.pptx)，实际上作为

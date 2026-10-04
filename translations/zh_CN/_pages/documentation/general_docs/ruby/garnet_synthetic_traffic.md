@@ -9,9 +9,9 @@ author: Jason Lowe-Power
 
 # Garnet 合成流量（Garnet Synthetic Traffic）
 
-Garnet Synthetic Traffic 提供了一个在受控输入下模拟 [Garnet 网络](/documentation/general_docs/ruby/garnet-2)的框架。这对于网络测试/调试，或使用合成流量进行纯网络模拟很有用。
+Garnet Synthetic Traffic 提供了一个在受控输入下模拟 [Garnet 网络]({{ site.baseurl }}/documentation/general_docs/ruby/garnet-2)的框架。这对于网络测试/调试，或使用合成流量进行纯网络模拟很有用。
 
-**注意：garnet 合成流量注入器只能与 [Garnet_standalone](/documentation/general_docs/ruby/Garnet_standalone.md) 一致性协议配合使用。**
+**注意：garnet 合成流量注入器只能与 [Garnet_standalone]({{ site.baseurl }}/documentation/general_docs/ruby/Garnet_standalone.md) 一致性协议配合使用。**
 
 ## 相关文件
 
@@ -23,7 +23,7 @@ Garnet Synthetic Traffic 提供了一个在受控输入下模拟 [Garnet 网络]
 
 ## 如何运行
 
-首先用 [Garnet_standalone](/documentation/general_docs/ruby/Garnet_standalone.md) 一致性协议构建 gem5。Garnet_standalone 协议与指令集架构无关，因此我们用 NULL 指令集架构构建它。
+首先用 [Garnet_standalone]({{ site.baseurl }}/documentation/general_docs/ruby/Garnet_standalone.md) 一致性协议构建 gem5。Garnet_standalone 协议与指令集架构无关，因此我们用 NULL 指令集架构构建它。
 
 对于 gem5 <= 23.0：
 

@@ -10,7 +10,7 @@ author: Jason Lowe-Power
 # Garnet 独立模式（Garnet Standalone）
 
 这是一个哑元缓存一致性协议，用于以独立方式运行 Garnet。
-该协议与 [Garnet 合成流量](/documentation/general_docs/ruby/garnet_synthetic_traffic)
+该协议与 [Garnet 合成流量]({{ site.baseurl }}/documentation/general_docs/ruby/garnet_synthetic_traffic)
 注入器配合使用。
 
 ### 相关文件
@@ -48,7 +48,7 @@ cpu 发送到合适的目录（依据地址）和合适的虚拟网络（依据
 **RubyRequestType:IFETCH** 和 **RubyRequestType:ST**。这些消息
 经 Sequencer 到达缓存控制器。这些
 消息的目的地由流量类型决定，并嵌入在地址中。
-更多细节见[此处](/documentation/general_docs/debugging_and_testing/directed_testers/ruby_random_tester)。
+更多细节见[此处]({{ site.baseurl }}/documentation/general_docs/debugging_and_testing/directed_testers/ruby_random_tester)。
 
   - 主要操作：
       - 缓存的作用只是充当底层互连网络中的源节点。
@@ -86,4 +86,4 @@ cpu 发送到合适的目录（依据地址）和合适的虚拟网络（依据
 
    该协议只假定 3 个 vnet。
   - 只应在运行 [Garnet 合成
-        流量](/documentation/general_docs/ruby/garnet_synthetic_traffic)时使用它。
+        流量]({{ site.baseurl }}/documentation/general_docs/ruby/garnet_synthetic_traffic)时使用它。

@@ -186,5 +186,5 @@ git commit --amend --no-edit
 
 ## 其他问题
 
-如果你在使用 gem5 时仍持续遇到错误，欢迎[寻求帮助](/ask-a-question)。
+如果你在使用 gem5 时仍持续遇到错误，欢迎[寻求帮助]({{ site.baseurl }}/ask-a-question)。
 此外，如果其他渠道未能涵盖你所需的全部信息，你可以在[此处](https://www.gem5.org/documentation/reporting_problems/)找到关于如何报告可能需要修复的错误的信息。

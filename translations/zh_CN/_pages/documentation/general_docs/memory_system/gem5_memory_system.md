@@ -27,7 +27,7 @@ Gem5 使用以 Simulation Object 为基类的派生对象作为构建
 和探听查询出现在从端口上。
 
 
-![模型的 Simulation Object 层次](/assets/img/gem5_MS_Fig1.PNG)
+![模型的 Simulation Object 层次]({{ site.baseurl }}/assets/img/gem5_MS_Fig1.PNG)
 
 
 ## CPU
@@ -35,7 +35,7 @@ Gem5 使用以 Simulation Object 为基类的派生对象作为构建
 数据[缓存（Cache）](http://doxygen.gem5.org/release/current/classgem5_1_1cache.html)对象
 实现了标准的缓存结构：
 
-![DCache Simulation Objet](/assets/img/gem5_MS_Fig2.PNG)
+![DCache Simulation Objet]({{ site.baseurl }}/assets/img/gem5_MS_Fig2.PNG)
 
 详细描述 O3 CPU 模型不在本文档的范围之内，因此
 这里只给出与该模型相关的几点说明：
@@ -134,7 +134,7 @@ WriteBuffer 队列持有以下内存请求：
 * 未命中缓存的写。
 * 被逐出（且为脏）缓存行的回写。
 
-![MSHR 与写缓冲块](/assets/img/gem5_MS_Fig3.PNG)
+![MSHR 与写缓冲块]({{ site.baseurl }}/assets/img/gem5_MS_Fig3.PNG)
 
 每个内存请求都会被分配到对应的 [MSHR](
 http://doxygen.gem5.org/release/current/classgem5_1_1MSHR.html) 对象（上图中的 READ 或 WRITE），
@@ -186,7 +186,7 @@ http://doxygen.gem5.org/release/current/classgem5_1_1MSHR.html) 块的内存读�
 ## Coherent Bus 对象
 
 
-![Coherent Bus 对象](/assets/img/gem5_MS_Fig4.PNG)
+![Coherent Bus 对象]({{ site.baseurl }}/assets/img/gem5_MS_Fig4.PNG)
 
 
 Coherent Bus 对象为探听协议提供基本支持：
@@ -231,11 +231,11 @@ Coherent Bus 对象为探听协议提供基本支持：
 下图展示了命中具有 Valid
 与 Read 标志的 Data Cache 行的读访问：
 
-![读命中（缓存行中必须置位 Read 标志）](/assets/img/gem5_MS_Fig5.PNG)
+![读命中（缓存行中必须置位 Read 标志）]({{ site.baseurl }}/assets/img/gem5_MS_Fig5.PNG)
 
 缓存未命中的读访问会产生以下消息序列：
 
-![带探听回复的读未命中](/assets/img/gem5_MS_Fig6.PNG)
+![带探听回复的读未命中]({{ site.baseurl }}/assets/img/gem5_MS_Fig6.PNG)
 
 注意，总线对象永远不会同时收到来自 DCache2 和 Memory 对象的响应。
 它把同一个 ReadReq 包（消息）对象同时发送给内存和数据
@@ -247,16 +247,16 @@ Coherent Bus 对象为探听协议提供基本支持：
 下图展示了命中 DCache1 中具有
 Valid 与 Write 标志的缓存行的写访问：
 
-![写命中（缓存行中置位 Write 标志）](/assets/img/gem5_MS_Fig7.PNG)
+![写命中（缓存行中置位 Write 标志）]({{ site.baseurl }}/assets/img/gem5_MS_Fig7.PNG)
 
 下一张图展示了命中 DCache1 中具有 Valid 但未置位
 Write 标志的缓存行的写访问 —— 这属于写未命中。DCache1 发出 UpgradeReq 以
 获得写权限。DCache2::snoopTiming 会使被命中的缓存行
 失效。注意 UpgradeResp 消息不携带数据。
 
-![写未命中 —— 标签匹配但未置位 Write 标志](/assets/img/gem5_MS_Fig8.PNG)
+![写未命中 —— 标签匹配但未置位 Write 标志]({{ site.baseurl }}/assets/img/gem5_MS_Fig8.PNG)
 
 下一张图展示了 DCache 中的写未命中。ReadExReq 会使 DCache2 中的缓存行
 失效。ReadExResp 携带内存缓存行的内容。
 
-![未命中 —— 没有匹配的标签](/assets/img/gem5_MS_Fig9.PNG)
+![未命中 —— 没有匹配的标签]({{ site.baseurl }}/assets/img/gem5_MS_Fig9.PNG)

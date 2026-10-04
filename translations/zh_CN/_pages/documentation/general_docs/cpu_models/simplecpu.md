@@ -28,9 +28,9 @@ BaseSimpleCPU 不能单独运行。你必须使用继承自 BaseSimpleCPU 的类
 ## **AtomicSimpleCPU**
 AtomicSimpleCPU 是使用 atomic 内存访问的 SimpleCPU 版本（细节见[内存系统（memory system）](../memory_system/index.html#access-types)）。它利用 atomic 访问的延迟估计来估算整体的缓存访问时间。AtomicSimpleCPU 派生自 BaseSimpleCPU，实现了读写内存的函数，也实现了 tick 函数，后者定义了每个 CPU 周期发生的事情。它定义了用于连接内存的端口，并把 CPU 连接到缓存。
 
-![AtomicSimpleCPU](/assets/img/AtomicSimpleCPU.jpg)
+![AtomicSimpleCPU]({{ site.baseurl }}/assets/img/AtomicSimpleCPU.jpg)
 
 ## **TimingSimpleCPU**
 TimingSimpleCPU 是使用 timing 内存访问的 SimpleCPU 版本（细节见[内存系统（memory system）](../memory_system/index.html#access-types)）。它在缓存访问上停顿，等待内存系统响应后再继续。与 AtomicSimpleCPU 一样，TimingSimpleCPU 也派生自 BaseSimpleCPU，并实现了同一组函数。它定义了用于连接内存的端口，并把 CPU 连接到缓存。它还定义了处理内存对所发出访问的响应所需的函数。
 
-![TimingSimpleCPU](/assets/img/TimingSimpleCPU.jpg)
+![TimingSimpleCPU]({{ site.baseurl }}/assets/img/TimingSimpleCPU.jpg)

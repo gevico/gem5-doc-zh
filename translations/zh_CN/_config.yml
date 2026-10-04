@@ -6,8 +6,11 @@ english_url: "https://www.gem5.org"
 english_repo: "https://github.com/gem5/website"
 english_branch: "stable"
 sourceurl: "https://github.com/gem5/website/blob/stable/README.md"
-url: ""
-baseurl: ""
+
+# GitHub Pages 项目站点：https://gevico.github.io/gem5-doc-zh/
+# CI 构建时由 actions/configure-pages 的 base_path 通过 --baseurl 覆盖，本地开发用下面的默认值。
+url: "https://gevico.github.io"
+baseurl: "/gem5-doc-zh"
 
 defaults:
   -

@@ -55,7 +55,7 @@ O3CPU 在设计时力求把依赖指令集架构（ISA）的代码与不依赖�
 
 ## **与 ThreadContext 的交互**
 
-[ThreadContext](/documentation/general_docs/cpu_models/execution_basics) 为外部对象提供了访问 CPU 内线程状态的接口。不过，由于 O3CPU 是乱序 CPU，这一点会稍微复杂化。虽然任一周期下的体系结构状态都有明确定义，但若该体系结构状态被修改会发生什么并没有明确定义。因此，读取 ThreadContext 并不费力，但写入 ThreadContext 并改变寄存器状态需要 CPU 清空整条流水线。这是因为可能存在依赖被修改寄存器的在途指令，而这些指令是否应看到该寄存器更新并不明确。因此，对 ThreadContext 的访问有可能导致 CPU 模拟（simulation）变慢。
+[ThreadContext]({{ site.baseurl }}/documentation/general_docs/cpu_models/execution_basics) 为外部对象提供了访问 CPU 内线程状态的接口。不过，由于 O3CPU 是乱序 CPU，这一点会稍微复杂化。虽然任一周期下的体系结构状态都有明确定义，但若该体系结构状态被修改会发生什么并没有明确定义。因此，读取 ThreadContext 并不费力，但写入 ThreadContext 并改变寄存器状态需要 CPU 清空整条流水线。这是因为可能存在依赖被修改寄存器的在途指令，而这些指令是否应看到该寄存器更新并不明确。因此，对 ThreadContext 的访问有可能导致 CPU 模拟（simulation）变慢。
 
 ## **后端流水线**
 ### 计算指令

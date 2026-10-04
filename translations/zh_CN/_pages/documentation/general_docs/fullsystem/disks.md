@@ -524,7 +524,7 @@ echo "No script found"
 
 ## 4) 使用 Packer 创建磁盘镜像
 
-本节讨论一种自动化创建装有 Ubuntu 服务器、与 gem5 兼容的磁盘镜像的方法。我们借助 packer 来完成，它使用一个 .json 模板文件来构建和配置磁盘镜像。该模板文件可以配置为构建装有特定基准测试（benchmark）的磁盘镜像。所提到的模板文件见[此处](/assets/files/packer_template.json)。
+本节讨论一种自动化创建装有 Ubuntu 服务器、与 gem5 兼容的磁盘镜像的方法。我们借助 packer 来完成，它使用一个 .json 模板文件来构建和配置磁盘镜像。该模板文件可以配置为构建装有特定基准测试（benchmark）的磁盘镜像。所提到的模板文件见[此处]({{ site.baseurl }}/assets/files/packer_template.json)。
 
 
 ### 用 Packer 构建简单磁盘镜像

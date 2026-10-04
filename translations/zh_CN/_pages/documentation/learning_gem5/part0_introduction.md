@@ -44,6 +44,6 @@ gem5 是为计算机体系结构研究而设计的，但如果你要研究全新
 当你添加所需的新特性时，请考虑把改动回馈给 gem5。这样他人就能受益于你的辛勤工作，gem5 也能成为更好的模拟器。
 
 ## 寻求帮助
-请访问我们的[提问](/ask-a-question)页面。
+请访问我们的[提问]({{ site.baseurl }}/ask-a-question)页面。
 
-在报告问题之前，请阅读[问题报告](/documentation/reporting_problems)。
+在报告问题之前，请阅读[问题报告]({{ site.baseurl }}/documentation/reporting_problems)。

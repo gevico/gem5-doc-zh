@@ -36,12 +36,12 @@ Trace CPU 模型用于回放弹性跟踪（elastic trace），这些跟踪由挂
 **跟踪生成与回放方法**
 
 ![方法框图：使用 O3 CPU 生成弹性跟踪并用 Trace CPU 回放
-](/assets/img/Etrace_methodology.jpg)
+]({{ site.baseurl }}/assets/img/Etrace_methodology.jpg)
 
 ## **弹性跟踪（elastic trace）生成**
 Elastic Trace Probe Listener 监听插入 O3 CPU 流水线各级的 Probe Point。它监视每条指令，通过记录数据写后读（Read-After-Write）依赖以及加载与存储之间的顺序依赖来构建依赖图。它把指令取指请求跟踪和弹性数据内存请求跟踪写成两个独立的文件，如下所示。
 
-![弹性跟踪文件生成](/assets/img/Etraces_output.jpg)
+![弹性跟踪文件生成]({{ site.baseurl }}/assets/img/Etraces_output.jpg)
 
 ### **跟踪文件格式**
 
@@ -146,11 +146,11 @@ build/ARM/gem5.opt --outdir=m5out/bbench/capture_10M \
 
 上面生成的执行跟踪随后由 Trace CPU 消费，如下图所示。
 
-![Trace_cpu_top_level](/assets/img/Trace_cpu_top_level.jpg)
+![Trace_cpu_top_level]({{ site.baseurl }}/assets/img/Trace_cpu_top_level.jpg)
 
 Trace CPU 模型继承自 Base CPU，并与数据与指令 L1 缓存对接。下面给出 Trace CPU 的框图，说明其主要逻辑与控制块。
 
-![Trace_CPU_details](/assets/img/Trace_cpu_detail.jpg)
+![Trace_CPU_details]({{ site.baseurl }}/assets/img/Trace_cpu_detail.jpg)
 
 ### **脚本与选项**
 

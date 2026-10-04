@@ -192,7 +192,7 @@ simple/PerfectSwitch.cc 中建模，链路在
 simple/Throttle.cc 中建模。流控通过在发送前监控
 输出链路上的可用缓冲区和可用带宽来实现。
 
-![Simple_network.jpg](/assets/img/Simple_network.jpg "Simple_network.jpg")
+![Simple_network.jpg]({{ site.baseurl }}/assets/img/Simple_network.jpg "Simple_network.jpg")
 
 
 ### Garnet2.0
@@ -205,4 +205,4 @@ simple/Throttle.cc 中建模。流控通过在发送前监控
 互连网络可以以独立方式运行并馈入
 合成流量。我们建议用 garnet2.0 这样做。
 
-**[用合成流量独立运行 Garnet](/documentation/general_docs/ruby/garnet_synthetic_traffic)**
+**[用合成流量独立运行 Garnet]({{ site.baseurl }}/documentation/general_docs/ruby/garnet_synthetic_traffic)**

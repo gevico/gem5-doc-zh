@@ -1,0 +1,89 @@
+name: 构建并部署中文站点
+
+# 仅当中文镜像或其复用的静态资源发生变化时重建，避免英文基线改动触发无谓构建。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'translations/**'
+      - 'assets/**'
+      - 'css/**'
+      - '_sass/**'
+      - '.github/workflows/deploy-zh-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署，排队但不取消正在进行的部署，避免站点被中途打断。
+concurrency:
+  group: pages-zh
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 构建中文站点
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: 安装 Ruby 与依赖
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          working-directory: translations/zh_CN
+
+      - name: 构建
+        working-directory: translations/zh_CN
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build \
+            --destination "${GITHUB_WORKSPACE}/_site" \
+            --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: 校验构建产物
+        run: |
+          set -euo pipefail
+          base="${{ steps.pages.outputs.base_path }}"
+          count=$(find _site -name '*.html' | wc -l | tr -d ' ')
+          echo "生成 HTML 页面数：${count}"
+          if [ "${count}" -lt 50 ]; then
+            echo "::error::生成的页面数异常偏少（${count}），疑似构建失败或源目录错误"
+            exit 1
+          fi
+          if [ ! -f "_site/index.html" ]; then
+            echo "::error::缺少 _site/index.html，首页未生成"
+            exit 1
+          fi
+          # 首页中必须出现带 baseurl 的站内链接，否则说明子路径部署未适配
+          if ! grep -q "href=\"${base}/" _site/index.html; then
+            echo "::error::首页未出现 baseurl（${base}）前缀的站内链接"
+            exit 1
+          fi
+          echo "构建产物校验通过"
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: 部署到 GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4

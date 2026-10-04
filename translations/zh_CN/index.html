@@ -7,7 +7,7 @@ title: gem5 模拟器系统
 
   <p>
     gem5 模拟器（simulator）是一个模块化平台，用于计算机系统体系结构（architecture）研究，涵盖系统级体系结构以及处理器微架构（microarchitecture）。
-    gem5 是一个<i>社区主导</i>的项目，采用<a href="/governance/">开放治理</a>模式。
+    gem5 是一个<i>社区主导</i>的项目，采用<a href="{{ '/governance/' | prepend: site.baseurl }}">开放治理</a>模式。
   </p>
   <br/>
   <p>
@@ -46,10 +46,10 @@ title: gem5 模拟器系统
           <p>
             欢迎加入 gem5 社区！无论你是经验丰富的开发者还是刚刚入门，在探索 gem5、为其贡献代码的过程中，都可以随时寻求帮助。
           </p>
-          <a href="/getting_started/"><button class="btn-main-link">第一步</button></a>
-          <a href="/ask-a-question/"><button class="btn-main-link">提问</button></a>
-          <a href="/documentation/learning_gem5/introduction/"><button class="btn-main-link">学习 gem5</button></a>
-          <a href="/publications/"><button class="btn-main-link">在论文中引用 gem5</button></a>
+          <a href="{{ '/getting_started/' | prepend: site.baseurl }}"><button class="btn-main-link">第一步</button></a>
+          <a href="{{ '/ask-a-question/' | prepend: site.baseurl }}"><button class="btn-main-link">提问</button></a>
+          <a href="{{ '/documentation/learning_gem5/introduction/' | prepend: site.baseurl }}"><button class="btn-main-link">学习 gem5</button></a>
+          <a href="{{ '/publications/' | prepend: site.baseurl }}"><button class="btn-main-link">在论文中引用 gem5</button></a>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@ title: gem5 模拟器系统
             gem5 项目依托 GitHub 开展，这里是社区主导开发的开放源码中枢。
           </p>
           <a href="https://github.com/gem5/gem5"><button class="btn-main-link">GitHub</button></a>
-          <a href="/contributing"><button class="btn-main-link">贡献指南</button></a>
+          <a href="{{ '/contributing' | prepend: site.baseurl }}"><button class="btn-main-link">贡献指南</button></a>
           <a href="https://github.com/gem5/gem5/pulls"><button class="btn-main-link">代码评审</button></a>
           <a href="https://github.com/gem5/gem5/issues"><button class="btn-main-link">缺陷报告</button></a>
           <a href="https://resources.gem5.org/"><button class="btn-main-link">gem5 resources</button></a>
@@ -77,8 +77,8 @@ title: gem5 模拟器系统
           <p>
             浏览我们的博客，了解 gem5 的最新更新与消息，及时掌握项目进展。
           </p>
-          <a href="{{ site.posts.first.url }}"><button class="btn-main-link">{{ site.posts.first.title }}</button></a>
-          <a href="{{ site.posts[1].url }}"><button class="btn-main-link">{{ site.posts[1].title }}</button></a>
+          <a href="{{ site.posts.first.url | prepend: site.baseurl }}"><button class="btn-main-link">{{ site.posts.first.title }}</button></a>
+          <a href="{{ site.posts[1].url | prepend: site.baseurl }}"><button class="btn-main-link">{{ site.posts[1].title }}</button></a>
         </div>
       </div>
     </div>
@@ -89,9 +89,9 @@ title: gem5 模拟器系统
     <div class="card card-connect-with-us">
       <h5 class="card-title"> 联系我们 </h5>
       <div class="card-body">
-        <a href="https://github.com/orgs/gem5/discussions"><img src="assets/img/external_logos/github.png" alt="GitHub logo" class="btn-main-link"></a>
-        <a href="https://join.slack.com/t/gem5-workspace/shared_invite/zt-2e2nfln38-xsIkN1aRmofRlAHOIkZaEA"><img src="assets/img/external_logos/slack.png" alt="Slack logo" class="btn-main-link"></a>
-        <a href="https://www.youtube.com/@gem5"><img src="assets/img/external_logos/youtube.png" alt="YouTube logo" class="btn-main-link"></a><br/>
+        <a href="https://github.com/orgs/gem5/discussions"><img src="{{ '/assets/img/external_logos/github.png' | prepend: site.baseurl }}" alt="GitHub logo" class="btn-main-link"></a>
+        <a href="https://join.slack.com/t/gem5-workspace/shared_invite/zt-2e2nfln38-xsIkN1aRmofRlAHOIkZaEA"><img src="{{ '/assets/img/external_logos/slack.png' | prepend: site.baseurl }}" alt="Slack logo" class="btn-main-link"></a>
+        <a href="https://www.youtube.com/@gem5"><img src="{{ '/assets/img/external_logos/youtube.png' | prepend: site.baseurl }}" alt="YouTube logo" class="btn-main-link"></a><br/>
       </div>
     </div>
   </div>
@@ -106,10 +106,10 @@ title: gem5 模拟器系统
   <div class="row sponsors-container">
     <div class="sponsor-item">
       <a href="https://www.nsf.gov">
-        <img src="assets/img/external_logos/nsf.png" alt="NSF logo" class="btn-main-link">
+        <img src="{{ '/assets/img/external_logos/nsf.png' | prepend: site.baseurl }}" alt="NSF logo" class="btn-main-link">
       </a>
       <a href="https://www.energy.gov/science/office-science">
-        <img src="assets/img/external_logos/doe.png" alt="DOE logo" class="btn-main-link">
+        <img src="{{ '/assets/img/external_logos/doe.png' | prepend: site.baseurl }}" alt="DOE logo" class="btn-main-link">
       </a>
       <p>
         本项目部分经费由
@@ -120,13 +120,13 @@ title: gem5 模拟器系统
 
     <div class="sponsor-item">
       <a href="https://arch.cs.ucdavis.edu">
-        <img src="assets/img/external_logos/DArchR.png" alt="DArchR logo" class="btn-main-link">
+        <img src="{{ '/assets/img/external_logos/DArchR.png' | prepend: site.baseurl }}" alt="DArchR logo" class="btn-main-link">
       </a>
       <p>
         UC Davis 计算机体系结构研究组
       </p>
       <a href="https://research.cs.wisc.edu/hal/">
-        <img src="assets/img/external_logos/hal.svg" alt="HAL logo" class="btn-main-link">
+        <img src="{{ '/assets/img/external_logos/hal.svg' | prepend: site.baseurl }}" alt="HAL logo" class="btn-main-link">
       </a>
       <p>
         UW-Madison 异构体系结构实验室研究组
@@ -135,13 +135,13 @@ title: gem5 模拟器系统
 
     <div class="sponsor-item">
       <a href="https://www.amd.com/en/corporate/university-program.html">
-        <img src="assets/img/external_logos/amd.png" alt="AMD logo" class="btn-main-link">
+        <img src="{{ '/assets/img/external_logos/amd.png' | prepend: site.baseurl }}" alt="AMD logo" class="btn-main-link">
       </a>
       <p>
         AMD 大学计划
       </p>
       <a href="https://www.google.com">
-        <img src="assets/img/external_logos/google.png" alt="Google logo" class="btn-main-link">
+        <img src="{{ '/assets/img/external_logos/google.png' | prepend: site.baseurl }}" alt="Google logo" class="btn-main-link">
       </a>
       <p>
         Google

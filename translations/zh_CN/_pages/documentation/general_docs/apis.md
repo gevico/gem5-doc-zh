@@ -75,8 +75,7 @@ https://github.com/gem5/gem5/blob/bd13e8e206e6c86581cf9afa904ef1060351a4b0/src/p
 
 ### 给开发者的说明
 
-在对 gem5 API 做任何修改之前，应咨询 [gem5-dev 邮件列表](
-/ask-a-question/)。无论出于何种原因修改 API，
+在对 gem5 API 做任何修改之前，应咨询 [gem5-dev 邮件列表]({{ site.baseurl }}/ask-a-question/)。无论出于何种原因修改 API，
 都**会**比其他改动受到更严格的审查。开发者应当
 准备好说明为什么该 API 必须变更。我们强烈建议先讨论 API 变更，否则它可能在代码评审中被拒绝。
 

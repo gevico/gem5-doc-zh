@@ -23,7 +23,7 @@ author: Jason Lowe-Power
 
 它从[如何创建配置脚本](learning_gem5/part1/simple_config)开始，介绍 gem5 的工作细节。
 接着介绍如何[修改和扩展](learning_gem5/part2/environment) gem5 以用于你的研究，包括[创建 `SimObject`](learning_gem5/part2/helloobject)、[使用 gem5 的事件驱动（event-driven）模拟基础设施](learning_gem5/part2/events)，以及[添加内存系统对象](learning_gem5/part2/memoryobject)。
-在 [Learning gem5 第三部分](learning_gem5/part3/MSIintro)中，详细讨论了 [Ruby 缓存一致性（cache coherence）模型](/documentation/general_docs/ruby)，包括一个完整的 MSI 缓存一致性协议实现。
+在 [Learning gem5 第三部分](learning_gem5/part3/MSIintro)中，详细讨论了 [Ruby 缓存一致性（cache coherence）模型]({{ site.baseurl }}/documentation/general_docs/ruby)，包括一个完整的 MSI 缓存一致性协议实现。
 
 Learning gem5 还会陆续推出更多部分，包括：
 * CPU 模型与指令集架构（ISA）

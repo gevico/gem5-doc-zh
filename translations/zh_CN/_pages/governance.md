@@ -150,9 +150,9 @@ PMC 主席对 PMC 其他成员没有额外权力：该角色是协调者与促�
 ---
 ## 贡献流程 {#contribution-process}
 
-任何能够尊重他人的人都可以为项目做贡献，不论其技能如何，因为贡献的方式有很多。例如，贡献者可能在项目邮件列表和 issue 跟踪器上活跃，或者提供补丁。各种贡献方式在另一份文档[提交贡献](/contributing)中有更详细的描述。
+任何能够尊重他人的人都可以为项目做贡献，不论其技能如何，因为贡献的方式有很多。例如，贡献者可能在项目邮件列表和 issue 跟踪器上活跃，或者提供补丁。各种贡献方式在另一份文档[提交贡献]({{ site.baseurl }}/contributing)中有更详细的描述。
 
-[GitHub discussions](https://github.com/orgs/gem5/discussions) 或 [GitHub issues](https://github.com/gem5/gem5/issues) 是贡献者在做第一次贡献时寻求帮助最合适的场所。关于 gem5 贡献流程的细节，见 gem5 网站上的[提交贡献](/contributing)页面或 [CONTRIBUTING.md](CONTRIBUTING.md)。每个新贡献都应以补丁形式提交到我们的 GitHub 站点。随后其他 gem5 开发者会评审你的补丁，可能要求修改。在补丁获得共识之后（见[决策流程](#decision-making-process)），该补丁就可以提交到 gem5 树中。对贡献者而言，应由维护者批准并为你合并该变更集。如果维护者没有在合理时间内（几天）合并该变更集，请向 gem5-dev 列表发送一封友好的提醒邮件。补丁提交到 gem5 之前，必须至少获得 2 个批准。如果某个补丁没有任何评审，用户应发送后续说明请求评审。
+[GitHub discussions](https://github.com/orgs/gem5/discussions) 或 [GitHub issues](https://github.com/gem5/gem5/issues) 是贡献者在做第一次贡献时寻求帮助最合适的场所。关于 gem5 贡献流程的细节，见 gem5 网站上的[提交贡献]({{ site.baseurl }}/contributing)页面或 [CONTRIBUTING.md](CONTRIBUTING.md)。每个新贡献都应以补丁形式提交到我们的 GitHub 站点。随后其他 gem5 开发者会评审你的补丁，可能要求修改。在补丁获得共识之后（见[决策流程](#decision-making-process)），该补丁就可以提交到 gem5 树中。对贡献者而言，应由维护者批准并为你合并该变更集。如果维护者没有在合理时间内（几天）合并该变更集，请向 gem5-dev 列表发送一封友好的提醒邮件。补丁提交到 gem5 之前，必须至少获得 2 个批准。如果某个补丁没有任何评审，用户应发送后续说明请求评审。
 
 #### 评审补丁 {#reviewing-patches}
 

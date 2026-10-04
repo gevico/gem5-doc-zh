@@ -52,7 +52,7 @@ MOESI_hammer 支持缓存刷写。要刷写一个缓存行，缓存
 行直到刷写完成，然后发出 PUTF 并
 回写该缓存行。
 
-![MOESI_hammer_cache_FSM.jpg](/assets/img/MOESI_hammer_cache_FSM.jpg
+![MOESI_hammer_cache_FSM.jpg]({{ site.baseurl }}/assets/img/MOESI_hammer_cache_FSM.jpg
 "MOESI_hammer_cache_FSM.jpg")
 
 ### 目录控制器
@@ -79,5 +79,5 @@ probe filter：待补充
 **控制器 FSM 图中使用的记法描述见
 [此处](#Coherence_controller_FSM_Diagrams "wikilink")。**
 
-![MOESI_hammer_dir_FSM.jpg](/assets/img/MOESI_hammer_dir_FSM.jpg
+![MOESI_hammer_dir_FSM.jpg]({{ site.baseurl }}/assets/img/MOESI_hammer_dir_FSM.jpg
 "MOESI_hammer_dir_FSM.jpg")

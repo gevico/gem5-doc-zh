@@ -196,8 +196,7 @@ This is where the description of this commit will occur taking into
 note the 72 character line limit.
 ```
 
-我们强烈建议贡献者在可能且合适的情况下遵循我们的[风格指南](
-/documentation/general_docs/development/coding_style/)。
+我们强烈建议贡献者在可能且合适的情况下遵循我们的[风格指南]({{ site.baseurl }}/documentation/general_docs/development/coding_style/)。
 
 随后任何改动都会通过我们的 [Gerrit 代码评审系统](
 https://gem5-review.googlesource.com)进行评审。一旦完全通过并被合并到

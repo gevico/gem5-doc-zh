@@ -102,7 +102,7 @@ binary = obtain_resource("x86-hello64-static")
 board.set_se_binary_workload(binary)
 ```
 
-`obtain_resource` 函数接受一个字符串，指定要从 [gem5-resources](/documentation/general_docs/gem5_resources) 获取哪个资源用于模拟。
+`obtain_resource` 函数接受一个字符串，指定要从 [gem5-resources]({{ site.baseurl }}/documentation/general_docs/gem5_resources) 获取哪个资源用于模拟。
 所有 gem5 资源都可以在 [gem5 Resources 网站](https://resources.gem5.org)上找到。
 
 如果宿主机上没有该资源，它会自动被下载。

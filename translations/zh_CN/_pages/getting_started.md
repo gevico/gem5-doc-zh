@@ -28,7 +28,7 @@ gem5 必须在 Unix 平台上构建。
 Linux 在每次提交上都会测试，也有人成功在 MacOS 上使用，但没有定期测试。
 强烈建议*不要*在虚拟机上编译 gem5。
 在笔记本电脑上的虚拟机中运行时，gem5 光编译就可能需要一个多小时。
-[构建 gem5](/documentation/general_docs/building) 提供了关于构建 gem5 及其依赖项的更多细节。
+[构建 gem5]({{ site.baseurl }}/documentation/general_docs/building) 提供了关于构建 gem5 及其依赖项的更多细节。
 
 ```
 cd gem5
@@ -39,7 +39,7 @@ scons build/ALL/gem5.opt -j <NUMBER OF CPUs ON YOUR PLATFORM>
 gem5 的接口是 Python 脚本。
 gem5 二进制程序读取并执行所提供的 Python 脚本，该脚本创建被测系统并执行模拟器。
 在本例中，脚本会创建一个*非常*简单的系统，并执行一个 "hello world" 二进制程序。
-关于该脚本的更多信息见 [Learning gem5](/documentation/learning_gem5/introduction) 一书的 [Simple Config 章节](/documentation/learning_gem5/part1/simple_config)。
+关于该脚本的更多信息见 [Learning gem5]({{ site.baseurl }}/documentation/learning_gem5/introduction) 一书的 [Simple Config 章节]({{ site.baseurl }}/documentation/learning_gem5/part1/simple_config)。
 
 ```
 build/ALL/gem5.opt configs/learning_gem5/part1/simple.py
@@ -50,10 +50,10 @@ build/ALL/gem5.opt configs/learning_gem5/part1/simple.py
 
 ## 后续步骤
 
-- [Learning gem5](/documentation/learning_gem5/introduction) 是一本仍在编写中的书，介绍如何使用 gem5 以及如何基于它进行开发。书中包含如何创建配置文件、如何用新模型扩展 gem5、gem5 的缓存一致性（cache coherence）模型等细节。
-- [gem5 活动](/events)经常随计算机体系结构会议以及其他场合举办。
-- 你可以通过 [gem5 的各个渠道](/ask-a-question)获取帮助，也可以关注 [Stack Overflow 上的 gem5 标签](https://stackoverflow.com/questions/tagged/gem5)。
-- [贡献指南](/contributing)介绍了如何贡献代码修改，以及为 gem5 做贡献的其他方式。
+- [Learning gem5]({{ site.baseurl }}/documentation/learning_gem5/introduction) 是一本仍在编写中的书，介绍如何使用 gem5 以及如何基于它进行开发。书中包含如何创建配置文件、如何用新模型扩展 gem5、gem5 的缓存一致性（cache coherence）模型等细节。
+- [gem5 活动]({{ site.baseurl }}/events)经常随计算机体系结构会议以及其他场合举办。
+- 你可以通过 [gem5 的各个渠道]({{ site.baseurl }}/ask-a-question)获取帮助，也可以关注 [Stack Overflow 上的 gem5 标签](https://stackoverflow.com/questions/tagged/gem5)。
+- [贡献指南]({{ site.baseurl }}/contributing)介绍了如何贡献代码修改，以及为 gem5 做贡献的其他方式。
 
 ## 在研究中使用 gem5 的建议
 
@@ -62,8 +62,7 @@ build/ALL/gem5.opt configs/learning_gem5/part1/simple.py
 gem5 的 git 仓库有两个分支：`develop` 和 `stable`。`develop`
 分支包含最新的 gem5 变更，**但并不稳定**。它
 更新频繁。**只有在为 gem5 项目做贡献时才应使用 `develop` 分支**
-（关于如何向 gem5 提交代码，请参见我们的[贡献指南](
-/contributing)）。
+（关于如何向 gem5 提交代码，请参见我们的[贡献指南]({{ site.baseurl }}/contributing)）。
 
 stable 分支包含稳定的 gem5 代码。stable 分支的 HEAD
 指向最新的 gem5 发布版本。我们建议研究者使用
@@ -86,7 +85,7 @@ The gem5 Simulator: Version 20.0+. Jason Lowe-Power, Abdul Mutaal Ahmad, Ayaz Ak
 
 ```
 
-[下载 .bib 文件。](/assets/files/gem5-20.bib)
+[下载 .bib 文件。]({{ site.baseurl }}/assets/files/gem5-20.bib)
 
 你也可以引用[最初的 gem5 论文](http://dx.doi.org/10.1145/2024716.2024718)。
 
@@ -98,8 +97,8 @@ The gem5 Simulator. Nathan Binkert, Bradford Beckmann, Gabriel Black, Steven K. 
 如果你没有使用某个特定的 gem5 稳定版本（例如 gem5-20.1.3），则应当注明
 *如 https://github.com/gem5/gem5 所示*的提交哈希。
 
-如果你使用了 GPU 模型、DRAM 模型或 gem5 中其他已[发表](/publications/)的模型，也建议引用相应的工作。
-关于最初论文之外贡献给 gem5 的模型列表，请参见[论文发表页面](/publications/)。
+如果你使用了 GPU 模型、DRAM 模型或 gem5 中其他已[发表]({{ site.baseurl }}/publications/)的模型，也建议引用相应的工作。
+关于最初论文之外贡献给 gem5 的模型列表，请参见[论文发表页面]({{ site.baseurl }}/publications/)。
 
 ### 我应该如何称呼 gem5？
 
@@ -111,9 +110,9 @@ The gem5 Simulator. Nathan Binkert, Bradford Beckmann, Gabriel Black, Steven K. 
 当然可以！
 gem5 徽标由 [Nicole Hill](http://nicoledhill.com/) 创作，并以 CC0 许可放入公有领域。
 你可以从以下链接下载完整尺寸的徽标：
-- [垂直彩色版](/assets/img/gem5logo/Color/noBackground/vertical/gem5ColorVert.png)
-- [水平彩色版](/assets/img/gem5logo/Color/noBackground/horizontal/gem5ColorLong.jpg)
-- [全部徽标（svg）](/assets/img/gem5logo/gem5masterFile.svg)
+- [垂直彩色版]({{ site.baseurl }}/assets/img/gem5logo/Color/noBackground/vertical/gem5ColorVert.png)
+- [水平彩色版]({{ site.baseurl }}/assets/img/gem5logo/Color/noBackground/horizontal/gem5ColorLong.jpg)
+- [全部徽标（svg）]({{ site.baseurl }}/assets/img/gem5logo/gem5masterFile.svg)
 
-使用 gem5 徽标时请遵循 [gem5 徽标样式指南](/assets/img/gem5logo/gem5styleguide.pdf)。
+使用 gem5 徽标时请遵循 [gem5 徽标样式指南]({{ site.baseurl }}/assets/img/gem5logo/gem5styleguide.pdf)。
 更多细节以及更多版本的徽标见 [gem5 文档源码](https://github.com/gem5/new-website/tree/master/assets/img/gem5logo)。

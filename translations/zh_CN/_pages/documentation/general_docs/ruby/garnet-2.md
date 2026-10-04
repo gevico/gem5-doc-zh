@@ -8,7 +8,7 @@ author: Jason Lowe-Power
 ---
 
 **gem5 Ruby 互连网络的更多细节见
-[此处](/documentation/general_docs/ruby/interconnection-network/)。**
+[此处]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network/)。**
 
 ### Garnet2.0：面向异构 SoC 的片上网络模型
 
@@ -35,9 +35,7 @@ Garnet2.0 建立在最初发表于
     }
 ```
 
-Garnet2.0 提供了片上网络路由器的周期精确微架构实现。它利用了 gem5 的 ruby 内存系统模型所提供的 [拓扑](
-/documentation/general_docs/ruby/interconnection-network#Topology) 与[路由](
-/documentation/general_docs/ruby/interconnection-network#Routing) 基础设施。默认路由器是
+Garnet2.0 提供了片上网络路由器的周期精确微架构实现。它利用了 gem5 的 ruby 内存系统模型所提供的 [拓扑]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network#Topology) 与[路由]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network#Routing) 基础设施。默认路由器是
 最先进的单周期流水线。可以支持在任何路由器中
 增加任意数量的周期延迟，只需在拓扑中指定。
 
@@ -90,7 +88,7 @@ Garnet2.0 使用 Network.py 中的通用网络参数：
 
 Garnet2.0 利用了 gem5 的 ruby 内存系统模型
 所提供的
-[拓扑](/documentation/general_docs/ruby/interconnection-network#Topology)
+[拓扑]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network#Topology)
 基础设施
 。任何异构拓扑都可以被建模。拓扑文件中的每个路由器都可以被赋予
 独立的延迟，以覆盖默认值。此外，每条链路
@@ -125,7 +123,7 @@ dst_inport" 被设为 "east"。
 
 Garnet2.0 利用了 gem5 的 ruby 内存系统模型
 所提供的
-[路由](/documentation/general_docs/ruby/interconnection-network#Routing)基础设施
+[路由]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network#Routing)基础设施
 。默认路由
 算法是采用最短路径的确定性基于表的路由算法。链路权重
 可用于让某些链路优先于其他链路。
@@ -308,4 +306,4 @@ buffers_per_ctrl_vc（默认 = 1），数据 Vnet 中的 VC 深度
 
 Garnet2.0 可以以独立方式运行并馈入合成
 流量。细节描述见：**[Garnet 合成
-流量](/documentation/general_docs/ruby/garnet_synthetic_traffic)**
+流量]({{ site.baseurl }}/documentation/general_docs/ruby/garnet_synthetic_traffic)**

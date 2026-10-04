@@ -52,7 +52,7 @@ author: Jason Lowe-Power
 **控制器 FSM 图中使用的记法描述见
 [此处](#Coherence_controller_FSM_Diagrams "wikilink")。**
 
-![MOESI_CMP_directory_L1cache_FSM.jpg](/assets/img/MOESI_CMP_directory_L1cache_FSM.jpg
+![MOESI_CMP_directory_L1cache_FSM.jpg]({{ site.baseurl }}/assets/img/MOESI_CMP_directory_L1cache_FSM.jpg
 "MOESI_CMP_directory_L1cache_FSM.jpg")
 
 #### **优化**
@@ -65,7 +65,7 @@ author: Jason Lowe-Power
 **控制器 FSM 图中使用的记法描述见
 [此处](#Coherence_controller_FSM_Diagrams "wikilink")。**
 
-![MOESI_CMP_directory_L1cache_optim_FSM.jpg](/assets/img/MOESI_CMP_directory_L1cache_optim_FSM.jpg
+![MOESI_CMP_directory_L1cache_optim_FSM.jpg]({{ site.baseurl }}/assets/img/MOESI_CMP_directory_L1cache_optim_FSM.jpg
 "MOESI_CMP_directory_L1cache_optim_FSM.jpg")
 
 ### L2 缓存控制器
@@ -157,7 +157,7 @@ author: Jason Lowe-Power
 [此处](#Coherence_controller_FSM_Diagrams "wikilink")。涉及其他芯片的转换用
 <span style="color:#CC3300">棕色</span>标注。**
 
-![MOESI_CMP_directory_L2cache_FSM_part_1.jpg](/assets/img/MOESI_CMP_directory_L2cache_FSM_part_1.jpg
+![MOESI_CMP_directory_L2cache_FSM_part_1.jpg]({{ site.baseurl }}/assets/img/MOESI_CMP_directory_L2cache_FSM_part_1.jpg
 "MOESI_CMP_directory_L2cache_FSM_part_1.jpg")
 
 下面第二张图把上图中央的六边形部分展开，展示类别 2（不在 L2 中，但在本芯片的 1 个或多个 L1 中）内部的转换。
@@ -166,7 +166,7 @@ author: Jason Lowe-Power
 [此处](#Coherence_controller_FSM_Diagrams "wikilink")。涉及其他芯片的转换用
 <span style="color:#CC3300">棕色</span>标注。**
 
-![MOESI_CMP_directory_L2cache_FSM_part_2.jpg](/assets/img/MOESI_CMP_directory_L2cache_FSM_part_2.jpg
+![MOESI_CMP_directory_L2cache_FSM_part_2.jpg]({{ site.baseurl }}/assets/img/MOESI_CMP_directory_L2cache_FSM_part_2.jpg
 "MOESI_CMP_directory_L2cache_FSM_part_2.jpg")
 
 ### 目录控制器
@@ -186,7 +186,7 @@ author: Jason Lowe-Power
 **控制器 FSM 图中使用的记法描述见
 [此处](#Coherence_controller_FSM_Diagrams "wikilink")。**
 
-![MOESI_CMP_directory_dir_FSM.jpg](/assets/img/MOESI_CMP_directory_dir_FSM.jpg
+![MOESI_CMP_directory_dir_FSM.jpg]({{ site.baseurl }}/assets/img/MOESI_CMP_directory_dir_FSM.jpg
 "MOESI_CMP_directory_dir_FSM.jpg")
 
 ### 其他特性

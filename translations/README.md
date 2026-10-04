@@ -31,13 +31,36 @@
 
 ```sh
 cd translations/zh_CN
-jekyll build --destination /tmp/gem5-zh-site
-# 本地预览
-jekyll serve --destination /tmp/gem5-zh-site
+bundle install                       # 首次执行
+bundle exec jekyll serve             # 本地预览：http://127.0.0.1:4000/gem5-doc-zh/
+bundle exec jekyll build --destination /tmp/gem5-zh-site
 ```
 
 `translations/zh_CN/` 通过相对软链接引用仓库根目录的 `assets/`、`css/`、`_sass/`，
 因此**必须在包含英文基线的仓库中构建**，不要单独把 `zh_CN/` 复制出去。
+
+依赖在 `translations/zh_CN/Gemfile` 中单独声明（Jekyll 4）。上游仓库根目录的
+`Gemfile` 只声明了 `github-pages`（对应 Jekyll 3.9），与本站点不兼容，**不要**用它来构建中文站点。
+若本机已全局安装 Jekyll 4 且不想走 Bundler，可用
+`JEKYLL_NO_BUNDLER_REQUIRE=true jekyll build` 跳过 Bundler。
+
+## GitHub Pages 部署
+
+- 站点地址：<https://gevico.github.io/gem5-doc-zh/>
+- 部署方式：GitHub Actions（`build_type: workflow`），工作流定义在
+  [`.github/workflows/deploy-zh-pages.yml`](../.github/workflows/deploy-zh-pages.yml)
+- 触发条件：`main` 分支上 `translations/**`、`assets/**`、`css/**`、`_sass/**`
+  或工作流自身发生变化时自动部署；也可在 Actions 页面手动触发（`workflow_dispatch`）
+- 因站点部署在仓库子路径下，`_config.yml` 的 `baseurl` 为 `/gem5-doc-zh`；
+  CI 中由 `actions/configure-pages` 输出的 `base_path` 通过 `--baseurl` 覆盖，
+  因此更换仓库名或迁移到自定义域名时无需改动配置
+
+**译文正文中的站内链接必须写成 `{{ site.baseurl }}/...`**，否则在子路径下会 404。
+新增或校验译文时请检查：
+`grep -rn '](/[^/]' translations/zh_CN`（应无输出）。
+
+> 旧版 GitHub Pages 由平台侧构建，不允许自定义插件；本仓库使用 Actions 自建部署，
+> 但仍**未引入任何自定义插件**，保持与官方站点一致的纯 Jekyll 构建。
 
 ## 译文状态
 
@@ -47,6 +70,8 @@ jekyll serve --destination /tmp/gem5-zh-site
 | 合计词数 | 218,028 |
 | 已完成初译 | 84 个文件，约 8.7 万词（39.9%） |
 | 构建校验 | `jekyll build` 零错误，生成 85 个 HTML 页面 |
+| 在线地址 | <https://gevico.github.io/gem5-doc-zh/>（GitHub Actions 自动部署） |
+| 站内链接校验 | 全站 85 个页面，0 处站内绝对链接缺失 `baseurl` |
 
 已完成的模块：站点界面（导航 / 页脚 / 首页 / 搜索 / 博客列表 / 404 / 6 个 layout）、
 全部顶层页面（关于、快速开始、提问、参与贡献、项目治理、论文发表、加入 Slack）、
@@ -93,9 +118,24 @@ compiling_workloads 等）、`general_docs/ruby/` 全部 14 篇、
 5. **重复 canonical**：上游会输出两条 canonical，中文模板改为 `if/else`。
 6. **缺失生成内容的回退**：`_data/documentation.yml` 中"Sphinx 文档"条目在中文镜像
    无对应页面，改指官方英文页面，避免空链接 / 404。
-7. **上游既有不一致按原文保留**（未修复）：`apis.md` 的 `title` 为 `gem5-resources`、
+7. **站内链接适配 baseurl**：中文站点部署在仓库子路径 `/gem5-doc-zh/`（而官方站部署在域名根），
+   因此所有站内绝对路径都改为 `{{ site.baseurl }}` 前缀，包括页面模板、译文正文中的
+   97 处 `](/...)` 标记链接、6 处跨行链接与 6 处引用式链接定义（`[label]: /path`）。
+   `_data/documentation.yml` 中以 `http(s)://` 开头的站外条目（Doxygen 等）保持绝对地址，
+   模板用 `contains '://'` 判断后不再拼接 baseurl —— 顺带修复了上游
+   `_includes/header.html` 在小站（`baseurl` 非空）下会把
+   `http://doxygen.gem5.org/...` 拼成 `/baseurlhttp://...` 的缺陷。
+8. **上游既有不一致按原文保留**（未修复）：`apis.md` 的 `title` 为 `gem5-resources`、
    `gem5_memory_syste` 拼写残缺、`O3CPU` permalink 含双斜杠、
-   `/publications/#original-paper` 为死锚点等。
+   `/publications/#original-paper` 为死锚点、
+   `ruby/garnet_synthetic_traffic` 链接指向上游并不存在的 `Garnet_standalone.md` 等。
+
+### 已知的断链（源于翻译尚未完成，非配置问题）
+
+站点上线后有 45 个站内链接指向**尚未翻译的页面**（英文站存在、中文镜像未生成），
+主要是 `learning_gem5/part1`～`part3`、`learning_gem5/gem5_101`、`events`、
+`dev_meetings`、`gem5art/introduction`、`isa_parser`、`minor_cpu`、`kconfig_build_system` 等。
+这些链接在补齐对应译文后会自动恢复；当前可点页面右上角的 **English** 入口查看英文原文。
 
 另外，本仓库**未包含**上游以下两项，原因见括号：
 

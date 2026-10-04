@@ -12,7 +12,7 @@ permalink: /documentation/general_docs/cpu_models/visualization/
 ## O3 流水线查看器
 o3 流水线查看器是一个基于文本的乱序（out-of-order）CPU 流水线查看器。它显示指令何时被取指（f）、译码（d）、重命名（n）、分派（p）、发射（i）、完成（c）和退休（r）。对于理解一段不太长的代码序列中流水线在何处停顿或清空，它非常有用。在会换行的彩色视图旁边，显示当前指令退休的 tick、该指令的 pc、其反汇编，以及该指令的 o3 序列号。
 
-![o3pipeviewer](/assets/img/O3pipeview.png)
+![o3pipeviewer]({{ site.baseurl }}/assets/img/O3pipeview.png)
 
 要生成你在上面看到的那种输出行，首先需要用 o3 cpu 运行一次实验：
 

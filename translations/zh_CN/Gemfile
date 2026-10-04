@@ -1,0 +1,11 @@
+# 中文镜像的构建依赖。
+#
+# 注意：上游仓库根目录的 Gemfile 只声明了 `github-pages`（对应 Jekyll 3.9），
+# 与本站点使用的 Jekyll 4 不兼容，因此中文镜像单独声明依赖。
+# CI 与本地构建都应在本目录（translations/zh_CN）下执行。
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.4"
+
+# Ruby 3.0 起不再内置 webrick，本地执行 `jekyll serve` 需要它。
+gem "webrick", "~> 1.9"

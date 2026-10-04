@@ -37,9 +37,10 @@
             文档
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <!-- 导航来自 _data/documentation.yml -->
+            <!-- 导航来自 _data/documentation.yml；以 http(s):// 开头的条目是站外链接，不拼接 baseurl -->
             {% for item in site.data.documentation.docs %}
-              <li><a class="dropdown-item" href="{{ item.items[0].url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+              {% if item.items[0].url contains '://' %}{% assign doc_href = item.items[0].url %}{% else %}{% assign doc_href = item.items[0].url | prepend: site.baseurl %}{% endif %}
+              <li><a class="dropdown-item" href="{{ doc_href }}">{{ item.title }}</a></li>
             {% endfor %}
           </ul>
         </li>

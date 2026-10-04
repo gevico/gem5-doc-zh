@@ -3,6 +3,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .sass-cache/
+.bundle/
+vendor/
 
 # Python 工具缓存
 __pycache__/

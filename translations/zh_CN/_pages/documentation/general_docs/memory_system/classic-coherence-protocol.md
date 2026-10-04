@@ -12,7 +12,7 @@ author: Jason Lowe-Power
 M5 2.0b4 引入了一个经过大幅重写和精简的缓存
 模型，其中包括一个新的一致性协议。（2.0 之前的旧缓存模型
 曾被修补到可以与 2.0beta 引入的新[内存
-系统](/documentation/general_docs/memory_system/)配合工作，但没有
+系统]({{ site.baseurl }}/documentation/general_docs/memory_system/)配合工作，但没有
 重写以利用新内存系统的特性。）
 
 新一致性协议的关键特性是：它被设计为
@@ -64,7 +64,7 @@ L2 会在其面向内存的总线上发出该请求，在那里它可能
 我们通过引入“快速探听（express snoop）”来解决这个两难问题。快速探听是特殊的
 探听请求，瞬时且原子地向上传播到层次结构
 （很像[内存
-系统](/documentation/general_docs/memory_system)页面上描述的 atomic 模式访问），即使系统正在以
+系统]({{ site.baseurl }}/documentation/general_docs/memory_system)页面上描述的 atomic 模式访问），即使系统正在以
 timing 模式运行也是如此。在功能上，它的行为非常像上面的方案 2 或 3，
 但由于探听沿常规总线
 互连传播，不会带来额外的配置开销。这会引入

@@ -21,16 +21,16 @@ Ruby 为内存子系统实现了一个详细的模拟模型。它建模包含性
 
 下图取自 ISCA 2005 的 GEMS 教程，展示了
 Ruby 中主要组件的高层视图。
-![ruby_overview.jpg](/assets/img/Ruby_overview.jpg)
+![ruby_overview.jpg]({{ site.baseurl }}/assets/img/Ruby_overview.jpg)
 
-关于以教程方式学习 Ruby，请参见 [Learning gem5 第三部分](/documentation/learning_gem5/part3/)
+关于以教程方式学习 Ruby，请参见 [Learning gem5 第三部分]({{ site.baseurl }}/documentation/learning_gem5/part3/)
 
 ### SLICC + 一致性协议：
 
 ***[SLICC](slicc)*** 是 *Specification Language for
 Implementing Cache Coherence* 的缩写。它是一种领域特定语言，用于指定缓存一致性协议。本质上，缓存一致性协议的行为就像一个状态机（state machine）。SLICC 用于指定该状态机的行为。由于目标是尽可能贴近地建模硬件，SLICC 对可以指定的状态机施加了约束。例如，SLICC 可以限制单个周期内可以发生的转换数量。除协议规范之外，SLICC 还把内存模型中的一些组件组合在一起。如下图所示，状态机从互连网络的输入端口获取输入，并把输出排队到网络的输出端口，从而把缓存/内存控制器与互连网络本身连接在一起。
 
-![slicc_overview.jpg](/assets/img/Slicc_overview.jpg)
+![slicc_overview.jpg]({{ site.baseurl }}/assets/img/Slicc_overview.jpg)
 
 支持以下缓存一致性协议：
 
@@ -67,7 +67,7 @@ Implementing Cache Coherence* 的缩写。它是一种领域特定语言，用�
 
 互连网络把内存层次结构的各个组件（缓存、内存、dma 控制器）连接在一起。
 
-![Interconnection_network.jpg](/assets/img/Interconnection_network.jpg
+![Interconnection_network.jpg]({{ site.baseurl }}/assets/img/Interconnection_network.jpg
 "Interconnection_network.jpg")
 
 互连网络的关键组件有：

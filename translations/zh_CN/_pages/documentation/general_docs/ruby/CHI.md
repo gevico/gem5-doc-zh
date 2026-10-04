@@ -33,7 +33,7 @@ CHI ruby 协议提供单个缓存控制器，它可以在缓存层次结构的�
 
 CHI（Coherent Hub Interface）提供组件体系结构与事务级规范，用于建模 MESI 与 MOESI 缓存一致性。如下图所示，CHI 定义了三种主要组件：
 
-[chi_components]: /assets/img/ruby_chi/chi_components.png
+[chi_components]: {{ site.baseurl }}/assets/img/ruby_chi/chi_components.png
 ![CHI 组件][chi_components]
 
 - 请求节点（request node）发起事务并向内存发送请求。请求节点可以是*全一致性请求节点（fully coherent request node，**RNF**）*，这意味着请求节点在本地缓存数据，并应响应探听请求。
@@ -70,17 +70,17 @@ CHI 协议的实现主要由两个控制器组成：
 
 下图概述了控制器被配置为 L1 缓存时的状态转换：
 
-[sm_l1_cache]: /assets/img/ruby_chi/sm_l1_cache.svg
+[sm_l1_cache]: {{ site.baseurl }}/assets/img/ruby_chi/sm_l1_cache.svg
 ![L1 缓存状态机][sm_l1_cache]
 
 转换上标注了来自 cpu 的到来的请求（或内部生成的请求，例如*替换*）以及由此向下游发出的请求。为简单起见，图中省略了不改变状态的请求（例如缓存命中）以及失效型探听（最终状态总是 `I`）。为简单起见，图中也只展示了 MOESI 协议中典型的状态转换。在 CHI 中，最终状态最终由响应者返回的数据类型决定（例如请求者收到 `ReadShared` 的响应时可能得到 `UD` 或 `UC` 数据）。
 
 下面几张图展示了*中间层级*缓存控制器（例如私有 L2、共享 L3、HNF 等）的转换：
 
-[sm_lx_cache]: /assets/img/ruby_chi/sm_lx_cache.svg
+[sm_lx_cache]: {{ site.baseurl }}/assets/img/ruby_chi/sm_lx_cache.svg
 ![中间层级缓存状态机][sm_lx_cache]
 
-[sm_lx_dir]: /assets/img/ruby_chi/sm_lx_dir.svg
+[sm_lx_dir]: {{ site.baseurl }}/assets/img/ruby_chi/sm_lx_dir.svg
 ![中间层级缓存目录状态][sm_lx_dir]
 
 与前一种情况一样，为简单起见省略了缓存命中。除缓存状态之外，还定义了以下目录状态来跟踪存在于上游缓存中的行：
@@ -134,7 +134,7 @@ CHI 协议的实现主要由两个控制器组成：
 
 下图概述了缓存控制器的实现。
 
-[cache_cntrl_arch]: /assets/img/ruby_chi/cache_cntrl_arch.png
+[cache_cntrl_arch]: {{ site.baseurl }}/assets/img/ruby_chi/cache_cntrl_arch.png
 ![缓存控制器架构][cache_cntrl_arch]
 
 在 Ruby 中，缓存控制器通过用 SLICC 语言定义状态机来实现。状态机中的转换由到达输入队列的消息触发。在我们的具体实现中，为每个 CHI 通道分别定义了到来的和发出的消息队列。启动新事务的到来请求与探听消息都经过同一个*请求分配*过程：我们分配一个事务缓冲条目（TBE），并把该请求或探听移入一个内部队列，其中的事务已准备就绪
@@ -144,7 +144,7 @@ CHI 协议的实现主要由两个控制器组成：
 如果该行存在于任何上游缓存中，其目录状态存储在目录条目中。对于存在未完成请求的行，瞬态保存在 TBE 中，并在事务完成时
 复制回缓存和/或目录。下图描述了事务生命周期中的各阶段，以及缓存控制器中主要组件（输入/输出端口、TBETable、Cache、Directory 和 SLICC 状态机）之间的交互。各阶段在后续小节中有更详细的描述。
 
-[transaction_phases]: /assets/img/ruby_chi/transaction_phases.png
+[transaction_phases]: {{ site.baseurl }}/assets/img/ruby_chi/transaction_phases.png
 ![事务生命周期][transaction_phases]
 
 ### 事务分配 {#transaction-allocation}
@@ -542,4 +542,4 @@ SLICC 编译器以不同方式检测资源：
 
 ### 协议表 {#protocol-table}
 
-[点击此处](/assets/img/ruby_chi/protocol_table.htm)
+[点击此处]({{ site.baseurl }}/assets/img/ruby_chi/protocol_table.htm)

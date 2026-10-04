@@ -90,7 +90,7 @@ git switch -c new-feature
 
 不同任务需要以不同方式修改项目。
 不过无论如何，都必须遵守我们的风格指南。完整的 C/C++ 风格
-指南见[此处](/documentation/general_docs/development/coding_style)。
+指南见[此处]({{ site.baseurl }}/documentation/general_docs/development/coding_style)。
 
 概括来说：
 
@@ -222,8 +222,7 @@ scons build/ALL/gem5.opt
 ```
 
 这会编译一个包含 "ALL" 指令集架构目标的 gem5 二进制程序。关于
-构建 gem5 的更多信息，请查阅我们的[构建文档](
-/documentation/general_docs/building)。
+构建 gem5 的更多信息，请查阅我们的[构建文档]({{ site.baseurl }}/documentation/general_docs/building)。
 
 ## 提交 {#committing}
 

@@ -6,7 +6,7 @@ permalink: documentation/reporting_problems/
 author: Bobby R. Bruce
 ---
 
-[gem5 社区](/ask-a-question)中的许多人都乐于在有人遇到问题或某些东西无法正常工作时提供帮助。不过请
+[gem5 社区]({{ site.baseurl }}/ask-a-question)中的许多人都乐于在有人遇到问题或某些东西无法正常工作时提供帮助。不过请
 记住，参与 gem5 工作的人还有其他事务，因此我们希望
 在报告问题之前，用户能先花一些精力尝试自行解决，
 或者至少收集足够的信息以便他人帮助解决
@@ -22,7 +22,7 @@ author: Bobby R. Bruce
 问题之前执行的一系列步骤/检查：
 
 1. 请检查是否已有类似问题在我们的某个
-[渠道](/ask-a-question)上提出过（也请查阅存档）。
+[渠道]({{ site.baseurl }}/ask-a-question)上提出过（也请查阅存档）。
 
 2. 确保你编译和运行的是最新版本的 [gem5](
 https://github.com/gem5/gem5)。该问题可能已经被解决。
@@ -37,7 +37,7 @@ https://github.com/gem5/gem5/pulls/)。你的问题可能已经有修复方案
 
 5. 如果看来合适，请启用一些调试标志（例如通过命令行
 `--debug-flags=Foo`）。关于调试标志的更多信息，请查阅我们的
-[调试教程](/documentation/learning_gem5/part2/debugging)。
+[调试教程]({{ site.baseurl }}/documentation/learning_gem5/part2/debugging)。
 
 6. 如果你的问题出现在 C++ 侧，不要害怕用 GDB 调试。
 
@@ -63,7 +63,7 @@ https://github.com/orgs/gem5/discussions)上提问，请提供任何
 如果你已经解决了自己报告的问题，请把解决方案作为后续回复告知社区
 （在对应的 GitHub issue 或 discussion 中）。如果你
 修复了一个缺陷，我们希望你能把修复提交到 gem5
-源码。具体做法请参阅我们的[贡献新手指南](/contributing)。
+源码。具体做法请参阅我们的[贡献新手指南]({{ site.baseurl }}/contributing)。
 
 如果你发现的问题在于某篇 gem5 文档/教程的内容有误，
 请考虑提交改动。关于如何为 gem5 网站做贡献的

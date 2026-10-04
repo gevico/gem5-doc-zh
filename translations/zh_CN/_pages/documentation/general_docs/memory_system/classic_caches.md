@@ -13,11 +13,11 @@ author: Jason Lowe-Power
 register，未命中状态保持寄存器）和 WB（Write Buffer，写缓冲）。缓存也可以
 启用预取（通常用于最后一级缓存）。
 
-gem5 中实现了多种可选的[替换策略](/documentation/general_docs/memory_system/replacement_policies)和[索引
-策略](/documentation/general_docs/memory_system/indexing_policies)。它们分别定义了：给定一个地址时可用于块替换的
+gem5 中实现了多种可选的[替换策略]({{ site.baseurl }}/documentation/general_docs/memory_system/replacement_policies)和[索引
+策略]({{ site.baseurl }}/documentation/general_docs/memory_system/indexing_policies)。它们分别定义了：给定一个地址时可用于块替换的
 候选块，以及如何利用地址信息找到块的位置。默认情况下，
-缓存行采用 [LRU（最近最少使用）](/documentation/general_docs/memory_system/replacement_policies)进行替换，
-并采用[组相联（Set Associative）](/documentation/general_docs/memory_system/indexing_policies)策略进行索引。
+缓存行采用 [LRU（最近最少使用）]({{ site.baseurl }}/documentation/general_docs/memory_system/replacement_policies)进行替换，
+并采用[组相联（Set Associative）]({{ site.baseurl }}/documentation/general_docs/memory_system/indexing_policies)策略进行索引。
 
 
 # 互连
@@ -32,7 +32,7 @@ gem5 中实现了多种可选的[替换策略](/documentation/general_docs/memor
 返回）。普通探听水平传播，快速探听沿缓存
 层次结构向上。
 
-![总线连接](/assets/img/Bus.png)
+![总线连接]({{ site.baseurl }}/assets/img/Bus.png)
 
 ### 桥接（Bridge）
 

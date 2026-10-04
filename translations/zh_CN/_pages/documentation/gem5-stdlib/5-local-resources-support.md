@@ -16,7 +16,7 @@ board.set_workload(obtain_resource(<ID_OF_WORKLOAD>))
 ```
 
 下图展示了在 [gem5 Resources 网站](https://resources.gem5.org/)上看到的 Resource ID 是什么：
-![gem5 resource ID 示例](/assets/img/stdlib/gem5-resource-id-example.png)
+![gem5 resource ID 示例]({{ site.baseurl }}/assets/img/stdlib/gem5-resource-id-example.png)
 
 因此，ID 为 '<ID_OF_WORKLOAD>' 的 WorkloadResource 会被解析，并用于构造它定义的函数调用。
 

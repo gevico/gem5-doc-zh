@@ -6,11 +6,16 @@
 > 术语表与构建说明见 [`translations/README.md`](translations/README.md)。
 > 仓库根目录下的英文内容为原样保留的上游基线。
 >
-> 构建中文站点：
+> **在线站点**：<https://gevico.github.io/gem5-doc-zh/>
+> （由 [`.github/workflows/deploy-zh-pages.yml`](.github/workflows/deploy-zh-pages.yml)
+> 在 `main` 分支变更时自动构建并部署到 GitHub Pages。）
+>
+> 本地构建中文站点：
 >
 > ```sh
 > cd translations/zh_CN
-> jekyll build --destination /tmp/gem5-zh-site
+> bundle install
+> bundle exec jekyll serve    # http://127.0.0.1:4000/gem5-doc-zh/
 > ```
 >
 > 中文译文仅完成初译与构建校验，尚未经过人工语义审校，使用时请以

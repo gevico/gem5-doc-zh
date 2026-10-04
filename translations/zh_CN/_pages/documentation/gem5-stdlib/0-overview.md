@@ -21,7 +21,7 @@ gem5 仓库中的 [`configs/examples/gem5_library`](https://github.com/gem5/gem5
 **注意：与标准库相关的文档/教程等已针对 v24.1 发布版本更新。
 在继续之前，请确保你使用的是正确版本的 gem5。**
 
-作为 [gem5 2022 Bootcamp](/events/boot-camp-2022) 的一部分，stdlib 曾作为教程讲授。
+作为 [gem5 2022 Bootcamp]({{ site.baseurl }}/events/boot-camp-2022) 的一部分，stdlib 曾作为教程讲授。
 该教程的幻灯片见[此处](https://raw.githubusercontent.com/gem5bootcamp/gem5-bootcamp-env/main/assets/slides/using-gem5-02-gem5-stdlib-tutorial.pdf)。
 该教程的录像见[此处](https://www.youtube.com/watch?v=vbruiMyIFsA)。
 
@@ -86,7 +86,7 @@ gem5 stdlib 的 resource 包用于获取并纳入资源（resource）。
 在 gem5 的语境中，资源是模拟中所使用、或被模拟所使用，但不直接用于构建被模拟系统的东西。
 通常它们是应用程序、内核、磁盘镜像、基准测试（benchmark）或测试。
 
-由于这些资源可能难以找到或难以创建，我们作为 [gem5-resources](/documentation/general_docs/gem5_resources) 的一部分提供了预构建资源。
+由于这些资源可能难以找到或难以创建，我们作为 [gem5-resources]({{ site.baseurl }}/documentation/general_docs/gem5_resources) 的一部分提供了预构建资源。
 例如，通过 gem5-resources，用户可以下载一个与 gem5 已知兼容的 Ubuntu 18.04 磁盘镜像，
 而无需自行配置。
 

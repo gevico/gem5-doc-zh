@@ -52,7 +52,7 @@ author: Jason Lowe-Power
       - 来自目录控制器的回写确认
       - 来自目录控制器的失效（在 dma 活动时）
 
-![MI_example_cache_FSM.jpg](/assets/img/MI_example_cache_FSM.jpg
+![MI_example_cache_FSM.jpg]({{ site.baseurl }}/assets/img/MI_example_cache_FSM.jpg
 "MI_example_cache_FSM.jpg")
 
   - 主要操作：
@@ -86,7 +86,7 @@ author: Jason Lowe-Power
         各核心的回写确认
       - 来自 DMA 控制器的 DMA 读、写请求
 
-![MI_example_dir_FSM.jpg](/assets/img/MI_example_dir_FSM.jpg
+![MI_example_dir_FSM.jpg]({{ site.baseurl }}/assets/img/MI_example_dir_FSM.jpg
 "MI_example_dir_FSM.jpg")
 
   - 主要操作：

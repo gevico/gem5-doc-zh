@@ -9,7 +9,7 @@ author: Bobby R. Bruce
 
 ## 开发你自己的 gem5 标准库组件
 
-![gem5 组件库设计](/assets/img/stdlib/gem5-components-design.png)
+![gem5 组件库设计]({{ site.baseurl }}/assets/img/stdlib/gem5-components-design.png)
 
 上图展示了 gem5 库组件的基本设计。
 其中有四个重要的抽象类：`AbstractBoard`、`AbstractProcessor`、`AbstractMemorySystem` 和 `AbstractCacheHierarchy`。
@@ -260,7 +260,7 @@ cache_hierarchy = UniqueCacheHierarchy()
 ### gem5 代码贡献与评审
 
 如果你认为你对 gem5 stdlib 的新增内容对 gem5 社区有益，可以把它作为补丁提交。
-如果你以前没有为 gem5 做过贡献，或需要回顾我们的流程，请遵循我们的[贡献指南](/contributing)。
+如果你以前没有为 gem5 做过贡献，或需要回顾我们的流程，请遵循我们的[贡献指南]({{ site.baseurl }}/contributing)。
 
 除常规贡献指南之外，我们强烈建议你对 stdlib 贡献做以下事情：
 
