@@ -1,0 +1,153 @@
+---
+layout: default
+title: The gem5 simulator system
+---
+<header>
+  <img src="{{ '/assets/img/gem5logo/Color/noBackground/horizontal/gem5ColorLong.gif' | prepend: site.baseurl }}" height="170px;">
+
+  <p>
+    The gem5 simulator is a modular platform for computer-system architecture research, encompassing system-level architecture as well as processor microarchitecture.
+    gem5 is a <i>community led</i> project with an <a href="/governance/">open governance</a> model.
+  </p>
+  <br/>
+  <p>
+    gem5 was originally conceived for computer architecture research in academia, but it has grown to be used in computer system design by academia, industry for research, and in teaching.
+  </p>
+
+  <hr class="hr-shorter">
+
+  <div class="row align-items-center testing-status">
+    <div class="col">
+      Testing status:
+    </div>
+    <div class="col">
+      <a href='https://github.com/gem5/gem5/actions/workflows/daily-tests.yaml'><img src='https://github.com/gem5/gem5/actions/workflows/daily-tests.yaml/badge.svg?branch=develop'></a>
+    </div>
+    <div class="col">
+      <a href='https://github.com/gem5/gem5/actions/workflows/weekly-tests.yaml'><img src='https://github.com/gem5/gem5/actions/workflows/weekly-tests.yaml/badge.svg?branch=develop'></a>
+    </div>
+    <div class="col">
+      <a href='https://github.com/gem5/gem5/actions/workflows/compiler-tests.yaml'><img src='https://github.com/gem5/gem5/actions/workflows/compiler-tests.yaml/badge.svg?branch=develop'></a>
+    </div>
+    <div class="col">
+      <a href="https://app.codecov.io/gh/gem5/gem5/tree/develop"><img src="https://codecov.io/gh/gem5/gem5/branch/develop/graph/badge.svg"/></a>
+    </div>
+  </div>
+
+</header>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-title"> Getting started </h5>
+        <div class="card-body">
+          <p>
+            Welcome to the gem5 community! Whether you're a seasoned developer or just starting, feel free to ask for guidance as you explore and contribute to gem5.
+          </p>
+          <a href="/getting_started/"><button class="btn-main-link">First steps</button></a>
+          <a href="/ask-a-question/"><button class="btn-main-link">Ask a question</button></a>
+          <a href="/documentation/learning_gem5/introduction/"><button class="btn-main-link">Learn gem5</button></a>
+          <a href="/publications/"><button class="btn-main-link">Cite gem5 in your work</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-title"> Source code </h5>
+        <div class="card-body">
+          <p>
+            Our gem5 project thrives on GitHub, serving as the open-source hub where community led development takes place.
+          </p>
+          <a href="https://github.com/gem5/gem5"><button class="btn-main-link">GitHub</button></a>
+          <a href="/contributing"><button class="btn-main-link">Contributing</button></a>
+          <a href="https://github.com/gem5/gem5/pulls"><button class="btn-main-link">Code reviews</button></a>
+          <a href="https://github.com/gem5/gem5/issues"><button class="btn-main-link">Bug reports</button></a>
+          <a href="https://resources.gem5.org/"><button class="btn-main-link">gem5 resources</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-title card-title-highlighted"> Latest news </h5>
+        <div class="card-body">
+          <p>
+            Explore our blog for the latest updates and news about gem5, offering a valuable resource to stay informed on the project's developments.
+          </p>
+          <a href="{{ site.posts.first.url }}"><button class="btn-main-link">{{ site.posts.first.title }}</button></a>
+          <a href="{{ site.posts[1].url }}"><button class="btn-main-link">{{ site.posts[1].title }}</button></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col">
+    <div class="card card-connect-with-us">
+      <h5 class="card-title"> Connect with us </h5>
+      <div class="card-body">
+        <a href="https://github.com/orgs/gem5/discussions"><img src="assets/img/external_logos/github.png" alt="GitHub logo" class="btn-main-link"></a>
+        <a href="https://join.slack.com/t/gem5-workspace/shared_invite/zt-2e2nfln38-xsIkN1aRmofRlAHOIkZaEA"><img src="assets/img/external_logos/slack.png" alt="Slack logo" class="btn-main-link"></a>
+        <a href="https://www.youtube.com/@gem5"><img src="assets/img/external_logos/youtube.png" alt="YouTube logo" class="btn-main-link"></a><br/>
+      </div>
+    </div>
+  </div>
+
+  <br/><br/>
+
+  <hr class="hr-shorter">
+
+  <div class="page-subtitle"> Sponsors </div>
+  <br/>
+
+  <div class="row sponsors-container">
+    <div class="sponsor-item">
+      <a href="https://www.nsf.gov">
+        <img src="assets/img/external_logos/nsf.png" alt="NSF logo" class="btn-main-link">
+      </a>
+      <a href="https://www.energy.gov/science/office-science">
+        <img src="assets/img/external_logos/doe.png" alt="DOE logo" class="btn-main-link">
+      </a>
+      <p>
+        This project is funded in part by
+        NSF (award number: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2311888">OAC-2311888</a> and <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2533192" target="_blank">TIP-2533192</a>)
+        and DOE (award number: <a href="https://pamspublic.science.energy.gov/WebPAMSExternal/Interface/Common/ViewPublicAbstract.aspx?rv=cc328a17-8db6-42af-aa73-8e96b6ad93a2&rtc=24&PRoleId=10">DE-SC0024502</a> and <a href="https://pamspublic.science.energy.gov/webpamsexternal/interface/awards/awardsearchexternal.aspx" target="_blank">DE-SC0024206</a>).
+      </p>
+    </div>
+
+    <div class="sponsor-item">
+      <a href="https://arch.cs.ucdavis.edu">
+        <img src="assets/img/external_logos/DArchR.png" alt="DArchR logo" class="btn-main-link">
+      </a>
+      <p>
+        UC Davis Computer Architecture Research Group
+      </p>
+      <a href="https://research.cs.wisc.edu/hal/">
+        <img src="assets/img/external_logos/hal.svg" alt="HAL logo" class="btn-main-link">
+      </a>
+      <p>
+        UW-Madison Heterogeneous Architectures Lab Research Group
+      </p>
+    </div>
+
+    <div class="sponsor-item">
+      <a href="https://www.amd.com/en/corporate/university-program.html">
+        <img src="assets/img/external_logos/amd.png" alt="AMD logo" class="btn-main-link">
+      </a>
+      <p>
+        AMD University Program
+      </p>
+      <a href="https://www.google.com">
+        <img src="assets/img/external_logos/google.png" alt="Google logo" class="btn-main-link">
+      </a>
+      <p>
+        Google
+      </p>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+$main: #0095AF;
+// 78777C grey
+$base: #f0f0f0;
+$font-style: 'Open Sans', sans-serif;
+$font-color: #262626;
+$link-color: #425469;
+$link-hover-color: $main;
+$heading-font: 'Open Sans', sans-serif;
+$heading-font-color: #262626;
+$content-width: 950px; // used: header p, testing-status
+$sidenav-width: 250px;
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #000000;
+}
+
+th{
+    border:2px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}

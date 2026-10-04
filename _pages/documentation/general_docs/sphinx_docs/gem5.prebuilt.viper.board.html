@@ -1,0 +1,232 @@
+---
+title: "gem5.prebuilt.viper.board.html"
+parent: sphinx-docs
+permalink: /documentation/general_docs/stdlib_api/gem5.prebuilt.viper.board.html
+---
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>gem5.prebuilt.viper.board module &#8212; gem5  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gem5.prebuilt.viper.cpu_cache_hierarchy module" href="gem5.prebuilt.viper.cpu_cache_hierarchy.html" />
+    <link rel="prev" title="gem5.prebuilt.viper package" href="gem5.prebuilt.viper.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-gem5.prebuilt.viper.board">
+<span id="gem5-prebuilt-viper-board-module"></span><h1>gem5.prebuilt.viper.board module<a class="headerlink" href="#module-gem5.prebuilt.viper.board" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gem5.prebuilt.viper.board.</span></span><span class="sig-name descname"><span class="pre">ViperBoard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clk_freq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="gem5.components.processors.abstract_processor.html#gem5.components.processors.abstract_processor.AbstractProcessor" title="gem5.components.processors.abstract_processor.AbstractProcessor"><span class="pre">AbstractProcessor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="gem5.components.memory.abstract_memory_system.html#gem5.components.memory.abstract_memory_system.AbstractMemorySystem" title="gem5.components.memory.abstract_memory_system.AbstractMemorySystem"><span class="pre">AbstractMemorySystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_hierarchy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="gem5.components.cachehierarchies.abstract_cache_hierarchy.html#gem5.components.cachehierarchies.abstract_cache_hierarchy.AbstractCacheHierarchy" title="gem5.components.cachehierarchies.abstract_cache_hierarchy.AbstractCacheHierarchy"><span class="pre">AbstractCacheHierarchy</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">gpus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="gem5.components.devices.gpus.amdgpu.html#gem5.components.devices.gpus.amdgpu.BaseViperGPU" title="gem5.components.devices.gpus.amdgpu.BaseViperGPU"><span class="pre">BaseViperGPU</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="gem5.components.boards.x86_board.html#gem5.components.boards.x86_board.X86Board" title="gem5.components.boards.x86_board.X86Board"><code class="xref py py-class docutils literal notranslate"><span class="pre">X86Board</span></code></a></p>
+<p>A derivative of X86Board capable of full system simulation for X86 with a
+GPU device. Provides all the functionality of the X86Board with helper
+methods specific to booting a disk with GPU libraries installed, enables
+AVX on supported CPU models (KVM only right now) for PyTorch, a workaround
+for X86Board 3GiB memory limitation, and helper methods to create a
+temporary readfile which reads in a binary blob into the simulator.</p>
+<p><strong>Limitations</strong>
+* Only KVM and ATOMIC CPU models can be used due to issue CPU Ruby protocol
+* 3GiB limit workaround is a VIPER specific hack which silently creates an</p>
+<blockquote>
+<div><p>additional memory controller with 128MiB of additional memory.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>This board should not be used to measure CPU performance.</p></li>
+</ul>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.abstract">
+<span class="sig-name descname"><span class="pre">abstract</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.abstract" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.cxx_exports">
+<span class="sig-name descname"><span class="pre">cxx_exports</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.cxx_exports" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.cxx_extra_bases">
+<span class="sig-name descname"><span class="pre">cxx_extra_bases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.cxx_extra_bases" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.cxx_param_exports">
+<span class="sig-name descname"><span class="pre">cxx_param_exports</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.cxx_param_exports" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.cxx_template_params">
+<span class="sig-name descname"><span class="pre">cxx_template_params</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.cxx_template_params" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.get_coherence_protocol">
+<span class="sig-name descname"><span class="pre">get_coherence_protocol</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.get_coherence_protocol" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.get_default_kernel_args">
+<span class="sig-name descname"><span class="pre">get_default_kernel_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.get_default_kernel_args" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a default list of arguments for the workload kernel. We assume
+the following strings may be used as placeholders, to be replaced when
+<code class="docutils literal notranslate"><span class="pre">set_kernel_disk_workload</span></code> is executed:</p>
+<ul class="simple">
+<li><p><cite>{root_value}</cite> : set to <code class="docutils literal notranslate"><span class="pre">get_default_kernel_root_val()</span></code>.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A default list of arguments for the workload kernel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.get_devices">
+<span class="sig-name descname"><span class="pre">get_devices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.get_devices" title="Link to this definition">¶</a></dt>
+<dd><p>Get the devices connected to the board.</p>
+<p>Currently, this is only used for GPUs by the ViperBoard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The devices connected to the board or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.get_disk_device">
+<span class="sig-name descname"><span class="pre">get_disk_device</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.get_disk_device" title="Link to this definition">¶</a></dt>
+<dd><p>Set a default disk device, in case user does not specify a disk device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The disk device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.get_low_mem_ports">
+<span class="sig-name descname"><span class="pre">get_low_mem_ports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">AddrRange</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Port</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.get_low_mem_ports" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.get_pci_host">
+<span class="sig-name descname"><span class="pre">get_pci_host</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.get_pci_host" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.make_gpu_app">
+<span class="sig-name descname"><span class="pre">make_gpu_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="gem5.components.devices.gpus.amdgpu.html#gem5.components.devices.gpus.amdgpu.BaseViperGPU" title="gem5.components.devices.gpus.amdgpu.BaseViperGPU"><span class="pre">BaseViperGPU</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">app</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.make_gpu_app" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gem5.prebuilt.viper.board.ViperBoard.override_create">
+<span class="sig-name descname"><span class="pre">override_create</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#gem5.prebuilt.viper.board.ViperBoard.override_create" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href=".">gem5</a></h1>
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="gem5.html">gem5 package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="gem5.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gem5.components.html">gem5.components package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="gem5.prebuilt.html">gem5.prebuilt package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="gem5.prebuilt.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gem5.prebuilt.html#module-gem5.prebuilt">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gem5.resources.html">gem5.resources package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gem5.simulate.html">gem5.simulate package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gem5.utils.html">gem5.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gem5.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gem5.html#module-gem5">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+<li><a href=".">Documentation overview</a><ul>  <li><a href="gem5.html">gem5 package</a><ul>
+  <li><a href="gem5.prebuilt.html">gem5.prebuilt package</a><ul>
+  <li><a href="gem5.prebuilt.viper.html">gem5.prebuilt.viper package</a><ul>
+      <li>Previous: <a href="gem5.prebuilt.viper.html" title="previous chapter">gem5.prebuilt.viper package</a></li>
+      <li>Next: <a href="gem5.prebuilt.viper.cpu_cache_hierarchy.html" title="next chapter">gem5.prebuilt.viper.cpu_cache_hierarchy module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/gem5.prebuilt.viper.board.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

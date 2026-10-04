@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<br><br>
+<div class="container">
+	<h1 class="title">Blog</h1><br>
+
+	<div id="posts">
+		{% for post in site.posts %}
+				<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+				<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+				<p>by {{ post.author }}</p>
+				<p>{{ post.content | truncate: 500 }}</p>
+				<a href="{{ post.url | prepend: site.baseurl }}"><p>Read more...</p></a>
+				<br><hr><br>
+		{% endfor %}
+		<p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</div>
+
+</div>

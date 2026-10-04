@@ -1,0 +1,153 @@
+---
+layout: default
+title: gem5 模拟器系统
+---
+<header>
+  <img src="{{ '/assets/img/gem5logo/Color/noBackground/horizontal/gem5ColorLong.gif' | prepend: site.baseurl }}" height="170px;">
+
+  <p>
+    gem5 模拟器（simulator）是一个模块化平台，用于计算机系统体系结构（architecture）研究，涵盖系统级体系结构以及处理器微架构（microarchitecture）。
+    gem5 是一个<i>社区主导</i>的项目，采用<a href="/governance/">开放治理</a>模式。
+  </p>
+  <br/>
+  <p>
+    gem5 最初是为学术界的计算机体系结构研究而设计的，如今已被学术界和工业界用于计算机系统设计、研究工作以及教学。
+  </p>
+
+  <hr class="hr-shorter">
+
+  <div class="row align-items-center testing-status">
+    <div class="col">
+      测试状态：
+    </div>
+    <div class="col">
+      <a href='https://github.com/gem5/gem5/actions/workflows/daily-tests.yaml'><img src='https://github.com/gem5/gem5/actions/workflows/daily-tests.yaml/badge.svg?branch=develop'></a>
+    </div>
+    <div class="col">
+      <a href='https://github.com/gem5/gem5/actions/workflows/weekly-tests.yaml'><img src='https://github.com/gem5/gem5/actions/workflows/weekly-tests.yaml/badge.svg?branch=develop'></a>
+    </div>
+    <div class="col">
+      <a href='https://github.com/gem5/gem5/actions/workflows/compiler-tests.yaml'><img src='https://github.com/gem5/gem5/actions/workflows/compiler-tests.yaml/badge.svg?branch=develop'></a>
+    </div>
+    <div class="col">
+      <a href="https://app.codecov.io/gh/gem5/gem5/tree/develop"><img src="https://codecov.io/gh/gem5/gem5/branch/develop/graph/badge.svg"/></a>
+    </div>
+  </div>
+
+</header>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-title"> 快速开始 </h5>
+        <div class="card-body">
+          <p>
+            欢迎加入 gem5 社区！无论你是经验丰富的开发者还是刚刚入门，在探索 gem5、为其贡献代码的过程中，都可以随时寻求帮助。
+          </p>
+          <a href="/getting_started/"><button class="btn-main-link">第一步</button></a>
+          <a href="/ask-a-question/"><button class="btn-main-link">提问</button></a>
+          <a href="/documentation/learning_gem5/introduction/"><button class="btn-main-link">学习 gem5</button></a>
+          <a href="/publications/"><button class="btn-main-link">在论文中引用 gem5</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-title"> 源代码 </h5>
+        <div class="card-body">
+          <p>
+            gem5 项目依托 GitHub 开展，这里是社区主导开发的开放源码中枢。
+          </p>
+          <a href="https://github.com/gem5/gem5"><button class="btn-main-link">GitHub</button></a>
+          <a href="/contributing"><button class="btn-main-link">贡献指南</button></a>
+          <a href="https://github.com/gem5/gem5/pulls"><button class="btn-main-link">代码评审</button></a>
+          <a href="https://github.com/gem5/gem5/issues"><button class="btn-main-link">缺陷报告</button></a>
+          <a href="https://resources.gem5.org/"><button class="btn-main-link">gem5 resources</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-title card-title-highlighted"> 最新动态 </h5>
+        <div class="card-body">
+          <p>
+            浏览我们的博客，了解 gem5 的最新更新与消息，及时掌握项目进展。
+          </p>
+          <a href="{{ site.posts.first.url }}"><button class="btn-main-link">{{ site.posts.first.title }}</button></a>
+          <a href="{{ site.posts[1].url }}"><button class="btn-main-link">{{ site.posts[1].title }}</button></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col">
+    <div class="card card-connect-with-us">
+      <h5 class="card-title"> 联系我们 </h5>
+      <div class="card-body">
+        <a href="https://github.com/orgs/gem5/discussions"><img src="assets/img/external_logos/github.png" alt="GitHub logo" class="btn-main-link"></a>
+        <a href="https://join.slack.com/t/gem5-workspace/shared_invite/zt-2e2nfln38-xsIkN1aRmofRlAHOIkZaEA"><img src="assets/img/external_logos/slack.png" alt="Slack logo" class="btn-main-link"></a>
+        <a href="https://www.youtube.com/@gem5"><img src="assets/img/external_logos/youtube.png" alt="YouTube logo" class="btn-main-link"></a><br/>
+      </div>
+    </div>
+  </div>
+
+  <br/><br/>
+
+  <hr class="hr-shorter">
+
+  <div class="page-subtitle"> 赞助方 </div>
+  <br/>
+
+  <div class="row sponsors-container">
+    <div class="sponsor-item">
+      <a href="https://www.nsf.gov">
+        <img src="assets/img/external_logos/nsf.png" alt="NSF logo" class="btn-main-link">
+      </a>
+      <a href="https://www.energy.gov/science/office-science">
+        <img src="assets/img/external_logos/doe.png" alt="DOE logo" class="btn-main-link">
+      </a>
+      <p>
+        本项目部分经费由
+        NSF（资助编号：<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2311888">OAC-2311888</a> 和 <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2533192" target="_blank">TIP-2533192</a>）
+        以及 DOE（资助编号：<a href="https://pamspublic.science.energy.gov/WebPAMSExternal/Interface/Common/ViewPublicAbstract.aspx?rv=cc328a17-8db6-42af-aa73-8e96b6ad93a2&rtc=24&PRoleId=10">DE-SC0024502</a> 和 <a href="https://pamspublic.science.energy.gov/webpamsexternal/interface/awards/awardsearchexternal.aspx" target="_blank">DE-SC0024206</a>）提供。
+      </p>
+    </div>
+
+    <div class="sponsor-item">
+      <a href="https://arch.cs.ucdavis.edu">
+        <img src="assets/img/external_logos/DArchR.png" alt="DArchR logo" class="btn-main-link">
+      </a>
+      <p>
+        UC Davis 计算机体系结构研究组
+      </p>
+      <a href="https://research.cs.wisc.edu/hal/">
+        <img src="assets/img/external_logos/hal.svg" alt="HAL logo" class="btn-main-link">
+      </a>
+      <p>
+        UW-Madison 异构体系结构实验室研究组
+      </p>
+    </div>
+
+    <div class="sponsor-item">
+      <a href="https://www.amd.com/en/corporate/university-program.html">
+        <img src="assets/img/external_logos/amd.png" alt="AMD logo" class="btn-main-link">
+      </a>
+      <p>
+        AMD 大学计划
+      </p>
+      <a href="https://www.google.com">
+        <img src="assets/img/external_logos/google.png" alt="Google logo" class="btn-main-link">
+      </a>
+      <p>
+        Google
+      </p>
+    </div>
+
+  </div>
+
+</div>

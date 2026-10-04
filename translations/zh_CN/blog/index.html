@@ -1,0 +1,22 @@
+---
+layout: default
+title: 博客
+permalink: /blog/
+---
+<br><br>
+<div class="container">
+	<h1 class="title">博客</h1><br>
+
+	<div id="posts">
+		{% for post in site.posts %}
+				<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+				<time>{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}</time>
+				<p>作者：{{ post.author }}</p>
+				<p>{{ post.content | truncate: 500 }}</p>
+				<a href="{{ post.url | prepend: site.baseurl }}"><p>阅读全文……</p></a>
+				<br><hr><br>
+		{% endfor %}
+		<p>订阅 <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
+</div>
+
+</div>

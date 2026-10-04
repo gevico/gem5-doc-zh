@@ -1,0 +1,194 @@
+path	words	layout	title	permalink	parent	doc	author
+404.md	136	page		/404.html			
+_pages/about.md	920	page	About	/about/	about		
+_pages/ask-a-question.md	391	page	Ask a question	/ask-a-question/			
+_pages/community/dev_meetings/index.md	341	page	Developer Meetings	dev_meetings/			
+_pages/community/dev_meetings/oct-2023-notes.md	1199		Developer Meeting - Oct 2023	dev_meetings/oct-2023-notes			
+_pages/community/events/arm-summit-2017.md	4240		ARM research summit 2017	events/arm-summit-2017			
+_pages/community/events/asplos-2008.md	570		ASPLOS 2008	events/asplos-2008			
+_pages/community/events/asplos-2017.md	210		ASPLOS 2017	events/asplos-2017			
+_pages/community/events/asplos-2018.md	950		ASPLOS 2018	events/asplos-2018			
+_pages/community/events/boot-camp-2022.md	1499		gem5 Boot Camp 2022	events/boot-camp-2022			
+_pages/community/events/boot-camp-latin-america-2024.md	377		gem5 Bootcamp in Latin America (2024)	events/boot-camp-latin-america-2024			
+_pages/community/events/bootcamp-2024.md	0	tabs	Bootcamp 2024	events/bootcamp-2024			
+_pages/community/events/dist-gem5.md	495		ISCA2017 - distributed gem5	events/dist-gem5			
+_pages/community/events/hcpa-2017.md	719		HPCA 2017	events/hpca-2017			
+_pages/community/events/hpca-2023.md	383		HPCA 2023: gem5 Tutorial	events/hpca-2023			
+_pages/community/events/hpca-2024.md	397		HPCA 2024: gem5 Tutorial	events/hpca-2024			
+_pages/community/events/ics-2018.md	328	page	ISC-2018 Vector Architecture Exploration	events/ics-2018	events		
+_pages/community/events/index.md	1734	page	Events	events/			
+_pages/community/events/isca-2006.md	743	page	ISCA 2006	events/isca-2006			
+_pages/community/events/isca-2011.md	222		ISCA 2011	events/isca-2011			
+_pages/community/events/isca-2015.md	584		ISCA 2015 - 2nd User Workshop	events/isca-2015			
+_pages/community/events/isca-2018.md	519		ISCA 2018	events/isca-2018			
+_pages/community/events/isca-2020.md	1036	toc	ISCA 2020: Learning gem5 Tutorial and gem5 Users' Workshop	events/isca-2020			
+_pages/community/events/isca-2022.md	770		ISCA 2022: gem5 Tutorial and Users' Workshop	events/isca-2022			
+_pages/community/events/isca-2023.md	1479		ISCA 2023: gem5 Workshop	events/isca-2023			
+_pages/community/events/isca-2024.md	474		ISCA 2024: gem5 Workshop and tutorial	events/isca-2024			
+_pages/community/events/isca-2025.md	558		gem5 Workshop at ISCA 2025	events/isca-2025			
+_pages/community/events/isca-2026.md	525	page	gem5 Workshop at ISCA 2026	/events/isca-2026			
+_pages/community/events/micro-2012.md	441		MICRO 2012 - 1st user workshop	events/micro-2012			
+_pages/contributing.md	2978	page	A guide to contributing	contributing			Bobby R. Bruce
+_pages/documentation/gem5-stdlib/0-overview.md	1108	documentation	Standard Library Overview	/documentation/gem5-stdlib/overview	gem5-standard-library	gem5 documentation	Bobby R. Bruce
+_pages/documentation/gem5-stdlib/1-tutorial-hello-world.md	937	documentation	Hello World Tutorial	/documentation/gem5-stdlib/hello-world-tutorial	gem5-standard-library	gem5 documentation	Bobby R. Bruce
+_pages/documentation/gem5-stdlib/2-tutorial-x86-fs.md	1239	documentation	X86 Full-System Tutorial	/documentation/gem5-stdlib/x86-full-system-tutorial	gem5-standard-library	gem5 documentation	Bobby R. Bruce
+_pages/documentation/gem5-stdlib/3-tutorial-developing-own-components.md	871	documentation	Developing Your Own Components Tutorial	/documentation/gem5-stdlib/develop-own-components-tutorial	gem5-standard-library	gem5 documentation	Bobby R. Bruce
+_pages/documentation/gem5-stdlib/4-tutorial-creating-stdlib-board.md	560	documentation	How To Create Your Own Board Using The gem5 Standard Library	/documentation/gem5-stdlib/develop-stdlib-board	gem5-standard-library	gem5 documentation	Jasjeet Rangi, Kunal Pai
+_pages/documentation/gem5-stdlib/5-local-resources-support.md	896	documentation	Local Resources Support in gem5	/documentation/gem5-stdlib/local-resources-support	gem5-standard-library	gem5 documentation	Kunal Pai, Harshil Patel
+_pages/documentation/gem5-stdlib/6-tutorial-suites.md	377	documentation	Suites in gem5	/documentation/gem5-stdlib/suites	gem5-standard-library	gem5 documentation	Kunal Pai, Harshil Patel
+_pages/documentation/gem5-stdlib/7-using-local-data-sources.md	753	documentation	Setting gem5 Resources data sources to support local resources	/documentation/gem5-stdlib/using-local-resources	gem5-standard-library	gem5 documentation	Harshil Patel
+_pages/documentation/gem5art/introduction.md	467	documentation	Zen and the art of gem5 experiments	/documentation/gem5art/introduction	gem5art	gem5art	
+_pages/documentation/gem5art/main/main_1_summary.md	398	documentation	Summary	/documentation/gem5art/main/summary	main	gem5art	
+_pages/documentation/gem5art/main/main_2_artifacts.md	1378	documentation	Artifacts	/documentation/gem5art/main/artifacts	main	gem5art	
+_pages/documentation/gem5art/main/main_3_run.md	999	documentation	Runs	/documentation/gem5art/main/run	main	gem5art	
+_pages/documentation/gem5art/main/main_4_tasks.md	327	documentation	Tasks	/documentation/gem5art/main/tasks	main	gem5art	
+_pages/documentation/gem5art/main/main_5_disks.md	1051	documentation	Disk Images	/documentation/gem5art/main/disks	main	gem5art	
+_pages/documentation/gem5art/main/main_6_faq.md	483	documentation	FAQ	/documentation/gem5art/main/faq	main	gem5art	
+_pages/documentation/gem5art/tutorials/tutorial_1_boot.md	1867	documentation	Boot Tutorial	/documentation/gem5art/tutorials/boot-tutorial	tutorial	gem5art	
+_pages/documentation/gem5art/tutorials/tutorial_2_npb.md	2035	documentation	NPB Tutorial	/documentation/gem5art/tutorials/npb-tutorial	tutorial	gem5art	
+_pages/documentation/gem5art/tutorials/tutorial_3_parsec.md	1535	documentation	PARSEC Tutorial	/documentation/gem5art/tutorials/parsec-tutorial	tutorial	gem5art	
+_pages/documentation/gem5art/tutorials/tutorial_4_spec.md	2441	documentation	SPEC Tutorial	/documentation/gem5art/tutorials/spec-tutorial	tutorial	gem5art	
+_pages/documentation/gem5art/tutorials/tutorial_5_microbench.md	838	documentation	Microbench Tutorial	/documentation/gem5art/tutorials/microbench-tutorial	tutorial	gem5art	
+_pages/documentation/general_docs/apis.md	1123	documentation	gem5-resources	/documentation/general_docs/gem5-apis/	gem5-apis	gem5 documentation	
+_pages/documentation/general_docs/architecture_support/arm_implementation.md	226	documentation	ARM implementation	/documentation/general_docs/architecture_support/arm_implementation/	architecture_support	gem5 documentation	
+_pages/documentation/general_docs/architecture_support/index.md	626	documentation	Architecture Support	/documentation/general_docs/architecture_support/	architecture_support	gem5 documentation	
+_pages/documentation/general_docs/architecture_support/isa_parser.md	4648	documentation	ISA Parser	documentation/general_docs/architecture_support/isa_parser/	architecture_support	gem5 documentation	
+_pages/documentation/general_docs/architecture_support/x86_microop_isa.md	3920	documentation	X86 Micro-op ISA	documentation/general_docs/architecture_support/x86_microop_isa/	architecture_support	gem5 documentation	
+_pages/documentation/general_docs/building/extras.md	396	documentation	Building EXTRAS	/documentation/general_docs/building/EXTRAS	building_extras	gem5 documentation	
+_pages/documentation/general_docs/building/index.md	657	documentation	Building gem5	/documentation/general_docs/building	building_extras	gem5 documentation	
+_pages/documentation/general_docs/checkpoints.md	875	documentation	Checkpoints	/documentation/general_docs/checkpoints/	checkpoints	gem5 documentation	
+_pages/documentation/general_docs/common-errors.md	951	documentation	Common errors within gem5	/documentation/general_docs/common-errors/	common-errors	gem5 documentation	
+_pages/documentation/general_docs/compiling_workloads/index.md	145	documentation	Compiling Workloads	/documentation/general_docs/compiling_workloads/	compiling_workloads	gem5 documentation	Hoa Nguyen
+_pages/documentation/general_docs/cpu_models/execution_basics.md	2873	documentation	Execution Basics	/documentation/general_docs/cpu_models/execution_basics	cpu_models	gem5 documentation	
+_pages/documentation/general_docs/cpu_models/index.md	72	documentation	gem5's CPU models	/documentation/general_docs/cpu_models/	cpu_models	gem5 documentation	
+_pages/documentation/general_docs/cpu_models/minor_cpu.md	6454	documentation	Minor CPU Model	/documentation/general_docs/cpu_models/minor_cpu	cpu_models	gem5 documentation	Andrew Bardsley
+_pages/documentation/general_docs/cpu_models/o3cpu.md	1285	documentation	Out of order CPU model	/documentation//general_docs/cpu_models/O3CPU	cpu_models	gem5 documentation	
+_pages/documentation/general_docs/cpu_models/simplecpu.md	331	documentation	Simple CPU Models	/documentation/general_docs/cpu_models/SimpleCPU	cpu_models	gem5 documentation	
+_pages/documentation/general_docs/cpu_models/tracecpu.md	870	documentation	Trace CPU Model	/documentation/general_docs/cpu_models/TraceCPU	cpu_models	gem5 documentation	
+_pages/documentation/general_docs/cpu_models/visualization.md	243	documentation	Visualization	/documentation/general_docs/cpu_models/visualization/	cpu_models	gem5 documentation	
+_pages/documentation/general_docs/debugging_and_testing/debugging/debugger_based_debugging.md	800	documentation	Debugger-based Debugging	/documentation/general_docs/debugging_and_testing/debugging/debugger_based_debugging	debugging	gem5 documentation	Bobby R. Bruce
+_pages/documentation/general_docs/debugging_and_testing/debugging/debugging_simulated_code.md	548	documentation	Debugging Simulated Code	/documentation/general_docs/debugging_and_testing/debugging/debugging_simulated_code	debugging	gem5 documentation	Bobby R. Bruce
+_pages/documentation/general_docs/debugging_and_testing/debugging/trace_baced_debugging.md	3102	documentation	Trace-based Debugging	/documentation/general_docs/debugging_and_testing/debugging/trace_based_debugging	debugging	gem5 documentation	Bobby R. Bruce
+_pages/documentation/general_docs/debugging_and_testing/directed_testers/garnet_synthetic_traffic.md	573	documentation	Garnet Synthetic Traffic	/documentation/general_docs/debugging_and_testing/directed_testers/garnet_synthetic_traffic/	directed_testers	gem5 documentation	Bobby R. Bruce
+_pages/documentation/general_docs/debugging_and_testing/directed_testers/ruby_random_tester.md	316	documentation	Ruby Random Tester	/documentation/general_docs/debugging_and_testing/directed_testers/ruby_random_tester/	directed_testers	gem5 documentation	Bobby R. Bruce
+_pages/documentation/general_docs/debugging_and_testing/index.md	1	documentation	Debugging and Testing	/documentation/general_docs/debugging_and_testing/	debugging	Debugging and Testing	Bobby R. Bruce
+_pages/documentation/general_docs/developement/coding_style.md	1944	documentation	C/C++ Coding Style	/documentation/general_docs/development/coding_style/	development	gem5 documentation	
+_pages/documentation/general_docs/developement/index.md	0	documentation	Developing gem5	/documentation/general_docs/development/			
+_pages/documentation/general_docs/developement/release_procedures.md	2237	documentation	Release Procedures	/documentation/general_docs/development/release_procedures/	development	gem5 documentation	
+_pages/documentation/general_docs/fullsystem/building_android_m.md	910	documentation	Building Android Marshmallow	/documentation/general_docs/fullsystem/building_android_m	fullsystem	gem5 documentation	
+_pages/documentation/general_docs/fullsystem/building_arm_kernel.md	494	documentation	Building ARM Kernel	/documentation/general_docs/fullsystem/building_arm_kernel	fullsystem	gem5 documentation	
+_pages/documentation/general_docs/fullsystem/devices.md	583	documentation	Devices	documentation/general_docs/fullsystem/devices	fullsystem	gem5 documentation	
+_pages/documentation/general_docs/fullsystem/disks.md	4069	documentation	Creating disk images	documentation/general_docs/fullsystem/disks	fullsystem	gem5 documentation	
+_pages/documentation/general_docs/fullsystem/guest_binaries.md	381	toc	Guest Binaries	/documentation/general_docs/fullsystem/guest_binaries			Giacomo Travaglini
+_pages/documentation/general_docs/fullsystem/index.md	0	documentation	Full system support	/documentation/general_docs/fullsystem/			
+_pages/documentation/general_docs/fullsystem/m5term.md	272	documentation	m5 term	/documentation/general_docs/fullsystem/m5term	fullsystem	gem5 documentation	
+_pages/documentation/general_docs/fullsystem/supported_disks_and_kernel.md	255	documentation	Supported Kernels and Disk Images for gem5 stable	/documentation/general_docs/fullsystem/supported_disks_and_kernels	fullsystem	gem5 documentation	
+_pages/documentation/general_docs/gem5_resources.md	1294	documentation	gem5-resources	/documentation/general_docs/gem5_resources/	gem5_resources	gem5 documentation	
+_pages/documentation/general_docs/gpu_models/gpufs.md	1834	documentation	Full System AMD GPU model	/documentation/general_docs/gpu_models/gpufs	gpu_models	gem5 documentation	
+_pages/documentation/general_docs/gpu_models/vega.md	946	documentation	AMD VEGA GPU model	/documentation/general_docs/gpu_models/vega	gpu_models	gem5 documentation	
+_pages/documentation/general_docs/index.md	0						
+_pages/documentation/general_docs/kconfig_build_system.md	359	documentation	Kconfig Build System	/documentation/general_docs/kconfig_build_system/	kconfig_build_system	gem5 documentation	
+_pages/documentation/general_docs/kvm_setup.md	547	page	Setting Up and Using KVM on your machine	/documentation/general_docs/using_kvm/			Mahyar Samani and Bobby R. Bruce
+_pages/documentation/general_docs/m5ops.md	1004	documentation	M5ops	/documentation/general_docs/m5ops/	m5ops	gem5 documentation	
+_pages/documentation/general_docs/memory_system/classic-coherence-protocol.md	728	documentation	Classic memory system coherence	/documentation/general_docs/memory_system/classic-coherence-protocol/	memory_system	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/memory_system/classic_caches.md	520	documentation	Classic caches	/documentation/general_docs/memory_system/classic_caches/	memory_system	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/memory_system/gem5_memory_system.md	1677	documentation	gem5_memory_syste	/documentation/general_docs/memory_system/gem5_memory_system/	memory_system	gem5 documentation	Djordje Kovacevi
+_pages/documentation/general_docs/memory_system/index.md	2068	documentation	Memory system	/documentation/general_docs/memory_system/	memory_system	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/memory_system/indexing_policies.md	238	documentation	Indexing Policies	/documentation/general_docs/memory_system/indexing_policies/	memory_system	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/memory_system/replacement_policies.md	888	documentation	Replacement Policies	/documentation/general_docs/memory_system/replacement_policies/	memory_system	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/moving_to_github.md	460	documentation	Moving Active Changes from Gerrit to GitHub	/documentation/general_docs/moving_to_github/	moving_to_github	gem5 documentation	
+_pages/documentation/general_docs/ruby/CHI.md	5476	documentation	CHI	/documentation/general_docs/ruby/CHI/	ruby	gem5 documentation	Tiago Mück
+_pages/documentation/general_docs/ruby/Garnet_standalone.md	510	documentation	Garnet standalone	/documentation/general_docs/ruby/Garnet_standalone/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/MESI_Two_Level.md	2371	documentation	MESI two level	/documentation/general_docs/ruby/MESI_Two_Level/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/MI_example.md	640	documentation	MI example	/documentation/general_docs/ruby/MI_example/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/MOESI_CMP_directory.md	1458	documentation	MOESI CMP directory	/documentation/general_docs/ruby/MOESI_CMP_directory/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/MOESI_CMP_token.md	501	documentation	MOESI CMP token	/documentation/general_docs/ruby/MOESI_CMP_token/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/MOESI_hammer.md	495	documentation	MOESI hammer	/documentation/general_docs/ruby/MOESI_hammer/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/cache-coherence-protocols.md	546	documentation	Cache Coherence Protocols	/documentation/general_docs/ruby/cache-coherence-protocols/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/garnet-2.md	2040	documentation	Garnet 2.0	/documentation/general_docs/ruby/garnet-2/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/garnet_synthetic_traffic.md	675	documentation	Garnet Synthetic Traffic	/documentation/general_docs/ruby/garnet_synthetic_traffic/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/heterogarnet.md	1661	documentation	HeteroGarnet (Garnet 3.0)	/documentation/general_docs/ruby/heterogarnet/	ruby	gem5 documentation	Srikant Bharadwaj
+_pages/documentation/general_docs/ruby/index.md	1549	documentation	Introduction	/documentation/general_docs/ruby/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/interconnection-network.md	1163	documentation	Interconnection network	/documentation/general_docs/ruby/interconnection-network/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/ruby/slicc.md	2243	documentation	SLICC	/documentation/general_docs/ruby/slicc/	ruby	gem5 documentation	Jason Lowe-Power
+_pages/documentation/general_docs/statistics/statistics.md	1312	documentation	Statistics	/documentation/general_docs/statistics/	statistics	gem5 documentation	
+_pages/documentation/general_docs/statistics/stats-api.md	2980	documentation	Statistics API	/documentation/general_docs/statistics/api	statistics	gem5 documentation	
+_pages/documentation/general_docs/thermal_model.md	772	documentation	Power and Thermal Model	/documentation/general_docs/thermal_model	thermal_model	gem5 documentation	
+_pages/documentation/index.md	319	documentation	gem5 documentation	/documentation/	gem5_documentation	gem5 documentation	Jason Lowe-Power
+_pages/documentation/learning_gem5/gem5_101/0_gem5_101.md	682	documentation	gem5 101	/documentation/learning_gem5/gem5_101/	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/gem5_101/1_gem5_101_homework1.md	621	documentation	Homework 1 for CS 752	/documentation/learning_gem5/gem5_101/homework-1	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/gem5_101/2_gem5_101_homework2.md	1463	documentation	Homework 2 for CS 752	/documentation/learning_gem5/gem5_101/homework-2	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/gem5_101/3_gem5_101_homework3.md	941	documentation	Homework 3 for CS 752	/documentation/learning_gem5/gem5_101/homework-3	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/gem5_101/4_gem5_101_homework4.md	691	documentation	Homework 4 for CS 752	/documentation/learning_gem5/gem5_101/homework-4	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/gem5_101/5_gem5_101_homework5.md	581	documentation	Homework 5 for CS 752	/documentation/learning_gem5/gem5_101/homework-5	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/gem5_101/6_gem5_101_homework6.md	735	documentation	Homework 6 - Programming multi-core	/documentation/learning_gem5/gem5_101/homework-6	gem5_101	Learning gem5	
+_pages/documentation/learning_gem5/part0_introduction.md	643	documentation	Learning gem5	/documentation/learning_gem5/introduction/	learning_gem5	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part1/part1_1_building.md	1113	documentation	Building gem5	/documentation/learning_gem5/part1/building/	part1	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part1/part1_2_simple_config.md	2401	documentation	Creating a simple configuration script	/documentation/learning_gem5/part1/simple_config/	part1	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part1/part1_3_more_complex_config.md	3653	documentation	Adding cache to configuration script	/documentation/learning_gem5/part1/cache_config/	part1	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part1/part1_4_gem5_stats.md	1889	documentation	Understanding gem5 statistics and output	/documentation/learning_gem5/part1/gem5_stats/	part1	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part1/part1_5_gem5_example_configs.md	1952	documentation	Using the default configuration scripts	/documentation/learning_gem5/part1/example_configs/	part1	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part1/part1_6_extending_configs.md	495	documentation	Extending gem5 for ARM	/documentation/learning_gem5/part1/extending_configs	part1	Learning gem5	Julian T. Angeles, Thomas E. Hansen
+_pages/documentation/learning_gem5/part2/part2_0_environment.md	263	documentation	Setting up your development environment	/documentation/learning_gem5/part2/environment/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_1_helloobject.md	1384	documentation	Creating a very simple SimObject	/documentation/learning_gem5/part2/helloobject/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_2_debugging.md	1847	documentation	Debugging gem5	/documentation/learning_gem5/part2/debugging/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_3_events.md	760	documentation	Event-driven programming	/documentation/learning_gem5/part2/events/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_4_parameters.md	1559	documentation	Adding parameters to SimObjects and more events	/documentation/learning_gem5/part2/parameters/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_5_memoryobject.md	3187	documentation	Creating SimObjects in the memory system	/documentation/learning_gem5/part2/memoryobject/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_6_simplecache.md	3011	documentation	Creating a simple cache object	/documentation/learning_gem5/part2/simplecache/	part2	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part2/part2_7_arm_power_modelling.md	1254	documentation	ARM Power Modelling	/documentation/learning_gem5/part2/arm_power_modelling/	part2	Learning gem5	Thomas E. Hansen
+_pages/documentation/learning_gem5/part2/part2_8_arm_dvfs_support.md	1398	documentation	ARM DVFS Support	/documentation/learning_gem5/part2/arm_dvfs_support/	part2	Learning gem5	Thomas E. Hansen
+_pages/documentation/learning_gem5/part3/part3_00_MSIntro.md	353	documentation	Introduction to Ruby	/documentation/learning_gem5/part3/MSIintro/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_01_cache-intro.md	529	documentation	MSI example cache protocol	/documentation/learning_gem5/part3/cache-intro/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_02_cache-declarations.md	2045	documentation	Declaring a state machine	/documentation/learning_gem5/part3/cache-declarations/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_03_cache-in-ports.md	2091	documentation	In port code blocks	documentation/learning_gem5/part3/cache-in-ports/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_04_cache_actions.md	1597	documentation	Action code blocks	/documentation/learning_gem5/part3/cache-actions/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_05_cache_transitions.md	505	documentation	Transition code blocks	/documentation/learning_gem5/part3/cache-transitions/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_06_directory.md	947	documentation	MSI Directory implementation	/documentation/learning_gem5/part3/directory/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_07_MSIbuilding.md	945	documentation	Compiling a SLICC protocol	/documentation/learning_gem5/part3/MSIbuilding/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_08_configuration.md	1198	documentation	Configuring a simple Ruby system	/documentation/learning_gem5/part3/configuration/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_09_running.md	81	documentation	Running the simple Ruby system	/documentation/learning_gem5/part3/running/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_10_MSIdebugging.md	2833	documentation	Debugging SLICC Protocols	/documentation/learning_gem5/part3/MSIdebugging/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/learning_gem5/part3/part3_11_simple-MI_example.md	132	documentation	Configuring for a standard protocol	/documentation/learning_gem5/part3/simple-MI_example/	part3	Learning gem5	Jason Lowe-Power
+_pages/documentation/reporting_problems.md	550	page	Reporting Problems	documentation/reporting_problems/	documentation		Bobby R. Bruce
+_pages/getting_started.md	932	page	Getting Started with gem5	/getting_started/			Jason Lowe-Power
+_pages/governance.md	3655	page	Governance	/governance/	about		
+_pages/join-slack.md	37	page	Join Slack	/join-slack/			
+_pages/publications.md	1657						
+_pages/search.html	94	page	Search	/search/			
+_pages/search.html	0	page	Search	/search/			
+_posts/2019-12-12-new-website.md	450	post	gem5 Website Redesign				Jason Lowe-Power
+_posts/2019-9-12-re-gem5.md	1163	post	RE-gem5: Building Sustainable Research Infrastructure				Jason Lowe-Power and Matt Sinclair
+_posts/2020-02-25-gem5-19.md	1251	post	gem5-19 Released!				Jason Lowe-Power
+_posts/2020-03-09-boot-tests.md	1304	post	X86 Linux Boot Status on gem5-19				Ayaz Akram
+_posts/2020-05-03-season-of-docs.md	1019	post	gem5 joins Season of Docs!				Bobby R. Bruce
+_posts/2020-05-21-gem5-20.md	1874	post	gem5-20.0 Released!				Jason Lowe-Power
+_posts/2020-05-26-gem5art.md	1429	post	gem5art announcement				Hoa Nguyen
+_posts/2020-05-29-flexible-cache.md	214	post	A flexible cache coherency protocol for the Ruby memory system				Tiago Mück
+_posts/2020-05-29-gem5-gui.md	1662	post	gem5 GUI				Shivam Desai, Rohit Dhamankar, Ravishdeep Singh, Ahmed Farooqui, Jason Lowe-Power, and Bobby R. Bruce
+_posts/2020-05-29-heterogarnet.md	191	post	HeteroGarnet - A Detailed Simulator for Diverse Interconnect Systems				Srikant Bharadwaj, Jieming Ying, Bradford Beckmann, and Tushar Krishna
+_posts/2020-05-29-memory-controller.md	1345	post	Memory controller updates for new DRAM technologies, NVM interfaces and flexible memory topologies				Wendy Elsasser and Nikos Nikoleris
+_posts/2020-05-29-modern-gpu-applications.md	1139	post	Modeling Modern GPU Applications in gem5				Kyle Roarty and Matthew D. Sinclair
+_posts/2020-05-29-modular-and-secure.md	1101	post	A Modular and Secure System Architecture for the IoT				Nils Asmussen, Hermann Härtig, and Gerhard Fettweis
+_posts/2020-05-30-enabling-multi-gpu.md	1494	post	Enabling Multi-GPU Support in gem5				Bobbi W. Yogatama, Matthew D. Sinclair, Michael M. Swift
+_posts/2020-06-01-heterogeneous-systems.md	1421	post	Adaptive Traffic Profiles as a tool to model heterogeneous systems in gem5				Matteo Andreozzi, Frances Conboy, Giovanni Stea, and Raffaele Zippo
+_posts/2020-06-01-towards-full.md	324	post	Towards full-system discrete GPU simulation				Mattew Poremba, Alexandru Dutu, Gaurav Jain, Pouya Fotouhi, Michael Boyer, and Bradford M. Beckmann.
+_posts/2020-06-15-town-hall-notes.md	550	post	Town Hall Meeting notes				Bobby R. Bruce
+_posts/2020-07-01-gem5-20-1-roadmap.md	2017	post	gem5-20.1 Roadmap				Jason Lowe-Power and Bobby Bruce
+_posts/2020-07-18-gem5-o3cpu-backend.md	564	post	gem5 O3CPU Backend Documentation Update				Zhengrong Wang
+_posts/2020-09-30-gem5-20-1.md	1600	post	gem5-20.1 Released!				Jason Lowe-Power
+_posts/2020-10-27-tme.md	2337	post	Arm's Transactional Memory Extension support in gem5				Timothy Hayes
+_posts/2021-03-19-gem5-21-0.md	586	post	gem5-21.0 Released!				Jason Lowe-Power
+_posts/2021-04-25-gem5-21-1-roadmap.md	982	post	gem5-21.1 Roadmap				Jason Lowe-Power
+_posts/2021-12-28-gem5-21-2.md	1557	post	gem5-21.2 Released!				Bobby R. Bruce
+_posts/2022-02-07-lupio.md	719	post	Support for LupIO devices in gem5				Joël Porquet-Lupine
+_posts/2022-06-17-gem5-22-0.md	1076	post	gem5-22.0 Released!				Jason Lowe-Power
+_posts/2022-06-18-guix.md	1449	post	The Case for Using Guix to Solve the gem5 Packaging Problem				Christopher Batten<sup>1</sup>, Pjotr Prins<sup>2</sup>, Efraim Flashner<sup>2</sup>, Arun Isaac<sup>2</sup>,Ekaiz Zarraga<sup>2</sup>, Erik Garrison<sup>2</sup>, Tuan Ta<sup>1</sup>
+_posts/2022-12-30-gem5-22-1.md	2132	post	gem5-22.1 Released!				Bobby R. Bruce
+_posts/2023-02-13-moving-to-full-system-gpu.md	1320	post	“Moving to full system simulation of GPU applications”				Matthew Poremba
+_posts/2023-02-16-benchmarking-linkers.md	605	post	Benchmarking Linkers within gem5				Melissa Jost
+_posts/2023-12-22-gem5-23-1.md	690	post	gem5 Version 23.1 Release: A Leap Forward in Computer Architecture Simulation				Jason Lowe-Power
+_posts/2024-11-12-bao-on-gem5.md	442	post	Running Bao Hypervisor on gem5				Hidemasa Kawasaki<sup>1</sup>, Soramichi Akiyama<sup>1</sup>.
+_posts/2025-30-7-gem5AccHetSimBlog.md	1217	post	ISCA 2025: Toward Full-System Heterogeneous Simulation: Merging gem5-SALAM with Mainline gem5				Akanksha Chaudhari, Matt Sinclair(UW-Madison).
+blog/index.html	0	default	Blog	/blog/			
+index.html	868	default	The gem5 simulator system	/			

@@ -1,0 +1,23 @@
+gem5.components.cachehierarchies.chi.nodes package
+==================================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gem5.components.cachehierarchies.chi.nodes.abstract_node
+   gem5.components.cachehierarchies.chi.nodes.directory
+   gem5.components.cachehierarchies.chi.nodes.dma_requestor
+   gem5.components.cachehierarchies.chi.nodes.l1_cache
+   gem5.components.cachehierarchies.chi.nodes.l2_cache
+   gem5.components.cachehierarchies.chi.nodes.memory_controller
+
+Module contents
+---------------
+
+.. automodule:: gem5.components.cachehierarchies.chi.nodes
+   :members:
+   :undoc-members:
+   :show-inheritance:

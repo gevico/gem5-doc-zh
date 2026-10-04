@@ -1,0 +1,136 @@
+# 侧边栏导航文案英译中映射（仅用于生成 _data/documentation.yml，不修改英文基线）
+# 格式：<英文><TAB><中文>；版本号等保持原样的条目不必登记
+# 规则：名词性专业术语写作“中文（English）”（每次出现均如此）；
+#       句式的描述性标题只译中文；产品名、工具名、缩写与代码标识符保留原名。
+gem5 documentation	gem5 文档
+Documentation	文档
+Learning gem5	学习 gem5
+gem5 Doxygen	gem5 Doxygen
+gem5art	gem5art
+Reporting Problems	问题报告
+Common Errors	常见错误
+Moving Active Changes from Gerrit to GitHub	把进行中的改动从 Gerrit 迁移到 GitHub
+Kconfig Build System	Kconfig 构建系统
+Development	开发
+Building	构建
+Using KVM	使用 KVM
+Sphinx Documentation	Sphinx 文档
+Doxygen	Doxygen
+gem5 standard library	gem5 标准库
+gem5 Resources	gem5 资源
+gem5 APIs	gem5 API
+Full System	全系统（full-system）
+Memory System	内存系统（memory system）
+Ruby Memory System	Ruby 内存系统（Ruby memory system）
+CPU Models	CPU 模型（CPU model）
+GPU Models	GPU 模型（GPU model）
+M5ops	M5ops
+Checkpoints	检查点（checkpoint）
+Directed Testers	定向测试器（directed tester）
+Debugging	调试
+Architecture Support	体系结构支持（architecture support）
+Power and Thermal Model	功耗与热模型（power and thermal model）
+Compiling Workloads	编译工作负载（workload）
+Stats Package	统计包（stats package）
+Stats API	统计 API（stats API）
+Introduction	简介
+Getting Started	快速开始
+Modifying/Extending	修改与扩展
+Modeling Cache Coherence with Ruby	用 Ruby 建模缓存一致性（cache coherence）
+gem5 101	gem5 101
+Details	详细说明
+Tutorials	教程
+Code Style	代码风格
+Release Procedures	发布流程
+Building EXTRAS	构建 EXTRAS
+Develop Branch	develop 分支
+Standard Library Overview	标准库概览
+Hello World Tutorial	Hello World 教程
+X86 Full-System Tutorial	x86 全系统教程
+Developing Your Own Components Tutorial	开发你自己的组件教程
+How To Create Your Own Board Using The gem5 Standard Library	如何使用 gem5 标准库创建自己的板卡
+How to use local resources and data sources in gem5	如何在 gem5 中使用本地资源与数据源
+Creating Disk Images	创建磁盘镜像
+Devices	设备
+m5term	m5term
+Building Linux ARM Kernel	构建 Linux ARM 内核
+Building Android Marshmallow	构建 Android Marshmallow
+Guest binaries	客户机二进制程序
+Supported Disk-Images and Kernels	支持的磁盘镜像与内核
+gem5 Memory System	gem5 内存系统（gem5 memory system）
+Replacement Policies	替换策略（replacement policy）
+Indexing Policies	索引策略（indexing policy）
+Classic memory system coherence	Classic 内存系统一致性（memory system coherence）
+Classic caches	Classic 缓存（classic cache）
+Ruby	Ruby
+Cache Coherence Protocols	缓存一致性协议（cache coherence protocol）
+Garnet 2.0	Garnet 2.0
+HeteroGarnet	HeteroGarnet
+MOESI CMP directory	MOESI CMP 目录
+Garnet Synthetic Traffic	Garnet 合成流量（Garnet synthetic traffic）
+SLICC	SLICC
+MI example	MI 示例
+Garnet standalone	Garnet 独立模式（Garnet standalone）
+Interconnection network	互连网络（interconnection network）
+MOESI hammer	MOESI hammer
+MOESI CMP token	MOESI CMP token
+MESI two level	MESI 两级（MESI two level）
+CHI	CHI
+SimpleCPU	SimpleCPU
+O3CPU	O3CPU
+TraceCPU	TraceCPU
+Minor CPU Model	Minor CPU 模型
+Execution Basics	执行基础
+Visualization	可视化
+System Emulation	系统模拟（system emulation）
+Ruby Random Tester	Ruby 随机测试器（Ruby random tester）
+Trace-based Debugging	基于跟踪的调试（trace-based debugging）
+Debugger-based Debugging	基于调试器的调试（debugger-based debugging）
+Debugging Simulated Code	调试被模拟的代码
+ARM Implementation	ARM 实现
+ISA Parser	ISA 解析器（ISA parser）
+X86 microop ISA	x86 微操作 ISA（x86 microop ISA）
+Building gem5	构建 gem5
+Creating a simple configuration script	创建简单的配置脚本
+Adding cache to configuration script	为配置脚本添加缓存
+Understanding gem5 statistics and output	理解 gem5 的统计信息与输出
+Using the default configuration scripts	使用默认配置脚本
+Extending gem5 for ARM	为 ARM 扩展 gem5
+Setting up your development environment	搭建开发环境
+Creating a very simple SimObject	创建一个非常简单的 SimObject
+Debugging gem5	调试 gem5
+Event-driven programming	事件驱动编程（event-driven programming）
+Adding parameters to SimObjects and more events	为 SimObject 添加参数以及更多事件
+Creating SimObjects in the memory system	在内存系统中创建 SimObject（memory system）
+Creating a simple cache object	创建简单的缓存对象（cache object）
+ARM Power Modelling	ARM 功耗建模
+ARM DVFS Support	ARM DVFS 支持
+Introduction to Ruby	Ruby 简介
+MSI example cache protocol	MSI 示例缓存协议
+Declaring a state machine	声明状态机
+In port code blocks	in 端口代码块
+Action code blocks	action 代码块
+Transition code blocks	transition 代码块
+MSI Directory implementation	MSI 目录实现
+Compiling a SLICC protocol	编译 SLICC 协议
+Configuring a simple Ruby system	配置简单的 Ruby 系统
+Running the simple Ruby system	运行简单的 Ruby 系统
+Debugging SLICC Protocols	调试 SLICC 协议
+Configuring for a standard protocol	为标准协议进行配置
+Homework 1	作业 1
+Homework 2	作业 2
+Homework 3	作业 3
+Homework 4	作业 4
+Homework 5	作业 5
+Homework 6	作业 6
+Summary	摘要
+Artifacts	制品（artifact）
+Runs	运行（run）
+Tasks	任务
+Disk Images	磁盘镜像
+FAQ	常见问题
+Boot Tutorial	启动教程
+NPB Tutorial	NPB 教程
+PARSEC Tutorial	PARSEC 教程
+SPEC Tutorial	SPEC 教程
+Microbench Tutorial	微基准教程

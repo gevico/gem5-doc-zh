@@ -1,0 +1,12 @@
+# 中文镜像的构建产物与缓存，不纳入版本控制
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Python 工具缓存
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store

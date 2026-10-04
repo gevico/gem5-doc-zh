@@ -1,0 +1,30 @@
+# 站点设置（简体中文镜像）
+title: gem5
+description: "gem5 模拟器系统"
+# 官方英文站点与源码，用于“English”入口、“英文源文”链接及规范链接（canonical）
+english_url: "https://www.gem5.org"
+english_repo: "https://github.com/gem5/website"
+english_branch: "stable"
+sourceurl: "https://github.com/gem5/website/blob/stable/README.md"
+url: ""
+baseurl: ""
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+# 构建设置
+sass:
+  sass_dir: _sass
+
+kramdown:
+  input: GFM
+  toc_levels: "1,2"
+  auto_id: true
+
+collections:
+  pages:
+    output: true
