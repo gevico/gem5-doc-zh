@@ -3,7 +3,7 @@ layout: documentation
 title: 乱序（out-of-order）CPU 模型
 doc: gem5 文档
 parent: cpu_models
-permalink: /documentation//general_docs/cpu_models/O3CPU
+permalink: /documentation/general_docs/cpu_models/O3CPU
 ---
 
 # **O3CPU**

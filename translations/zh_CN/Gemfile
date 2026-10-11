@@ -7,5 +7,8 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.4"
 
+# 构建时解析 HTML，统一处理导航、正文和静态资源中的站内链接。
+gem "nokogiri", "~> 1.18"
+
 # Ruby 3.0 起不再内置 webrick，本地执行 `jekyll serve` 需要它。
 gem "webrick", "~> 1.9"

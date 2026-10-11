@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Building gem5
+title: 构建 gem5
 doc: 学习 gem5
 parent: part1
 permalink: /documentation/learning_gem5/part1/building/

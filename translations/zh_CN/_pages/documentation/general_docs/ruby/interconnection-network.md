@@ -106,7 +106,7 @@ BasicRouter.py 中）**：
   - **链路参数：**
       - **latency**：在链路内传输的延迟。
       - **weight**：与该链路关联的权重。该参数由
-        路由表在决定路由时使用，详见后面的[路由](Interconnection_Network#Routing "wikilink")。
+        路由表在决定路由时使用，详见后面的[路由](#Routing)。
       - **bandwidth_factor**：仅由 simple 网络用于指定
         链路的字节宽度。它会转换为带宽
         乘数（simple/SimpleLink.cc），单条链路的
@@ -198,7 +198,7 @@ simple/Throttle.cc 中建模。流控通过在发送前监控
 ### Garnet2.0
 
 新的（2016 年）Garnet2.0 网络的细节见
-**[此处](garnet-2)**。
+**[此处]({{ site.baseurl }}/documentation/general_docs/ruby/garnet-2/)**。
 
 ## 用合成流量运行网络
 

@@ -4,8 +4,9 @@ description: "gem5 模拟器系统"
 # 官方英文站点与源码，用于“English”入口、“英文源文”链接及规范链接（canonical）
 english_url: "https://www.gem5.org"
 english_repo: "https://github.com/gem5/website"
-english_branch: "stable"
-sourceurl: "https://github.com/gem5/website/blob/stable/README.md"
+# 固定英文源文链接到翻译基线；此字段也接受提交 SHA。
+english_branch: "07ebfaf9bb1a0a4be2b822f3a4cf95abf20e4a4e"
+sourceurl: "https://github.com/gem5/website/blob/07ebfaf9bb1a0a4be2b822f3a4cf95abf20e4a4e/README.md"
 
 # GitHub Pages 项目站点：https://gevico.github.io/gem5-doc-zh/
 # CI 构建时由 actions/configure-pages 的 base_path 通过 --baseurl 覆盖，本地开发用下面的默认值。

@@ -1,14 +1,17 @@
 name: 构建并部署中文站点
 
-# 仅当中文镜像或其复用的静态资源发生变化时重建，避免英文基线改动触发无谓构建。
+# 英文页面的 permalink 也参与中文站点的缺页回退，因此需要触发重建。
 on:
   push:
     branches: [main]
     paths:
       - 'translations/**'
+      - '_pages/**'
       - 'assets/**'
       - 'css/**'
       - '_sass/**'
+      - 'tools/check_site_links.py'
+      - 'tests/test_site_links.py'
       - '.github/workflows/deploy-zh-pages.yml'
   workflow_dispatch:
 
@@ -41,6 +44,9 @@ jobs:
           bundler-cache: true
           working-directory: translations/zh_CN
 
+      - name: 链接处理回归检查
+        run: python3 -m unittest discover -s tests -v
+
       - name: 构建
         working-directory: translations/zh_CN
         env:
@@ -69,6 +75,8 @@ jobs:
             echo "::error::首页未出现 baseurl（${base}）前缀的站内链接"
             exit 1
           fi
+          # 导航、正文、下载、图片和表单必须指向实际生成的文件。
+          python3 tools/check_site_links.py _site --baseurl "${base}"
           echo "构建产物校验通过"
 
       - name: 上传构建产物

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Setting up your development environment
+title: 搭建开发环境
 doc: 学习 gem5
 parent: part2
 permalink: /documentation/learning_gem5/part2/environment/

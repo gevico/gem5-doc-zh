@@ -9,6 +9,11 @@
 - 术语表：`translations/terminology.md`
 - 维护脚本：`translations/zh_CN/_meta/`
 
+本项目以该提交的官方文档为固定快照，目标是补齐中文内容，支持通过中文学习 gem5。
+后续翻译和勘误均以仓库内保存的英文基线为依据，不持续同步上游版本。
+“查看英文源文”链接固定到上述提交；“English”入口和未翻译页面的回退链接仍访问
+官方英文站，其内容可能不同于本仓库快照。
+
 ## 目录结构
 
 ```
@@ -22,7 +27,9 @@
         ├── _config.yml        # 中文站点配置
         ├── _data/documentation.yml   # 中文侧边栏（由 _meta/gen_nav.py 生成）
         ├── _includes/ _layouts/      # 界面模板（已中文化）
+        ├── _plugins/site_links.rb    # 根据实际译文与英文 permalink 解析链接
         ├── _pages/ _posts/ blog/     # 与英文同路径的中文页面
+        ├── pages/static -> ../../../_pages/static  # 教程图片与示例下载
         ├── _meta/                    # 清单、导航抽取与生成脚本
         └── assets css _sass -> ../../  # 软链接复用上游静态资源，不复制
 ```
@@ -33,24 +40,26 @@
 cd translations/zh_CN
 bundle install                       # 首次执行
 bundle exec jekyll serve             # 本地预览：http://127.0.0.1:4000/gem5-doc-zh/
-bundle exec jekyll build --destination /tmp/gem5-zh-site
+bundle exec jekyll build --destination ../../builds/zh-site
+cd ../..
+python3 tools/check_site_links.py builds/zh-site
 ```
 
 `translations/zh_CN/` 通过相对软链接引用仓库根目录的 `assets/`、`css/`、`_sass/`，
+并将 `_pages/static/` 发布到 `pages/static/`，供教程图片和示例下载使用，
 因此**必须在包含英文基线的仓库中构建**，不要单独把 `zh_CN/` 复制出去。
 
 依赖在 `translations/zh_CN/Gemfile` 中单独声明（Jekyll 4）。上游仓库根目录的
 `Gemfile` 只声明了 `github-pages`（对应 Jekyll 3.9），与本站点不兼容，**不要**用它来构建中文站点。
-若本机已全局安装 Jekyll 4 且不想走 Bundler，可用
-`JEKYLL_NO_BUNDLER_REQUIRE=true jekyll build` 跳过 Bundler。
+链接处理插件依赖 Nokogiri，使用上述 `bundle install` 会一并安装。
 
 ## GitHub Pages 部署
 
 - 站点地址：<https://gevico.github.io/gem5-doc-zh/>
 - 部署方式：GitHub Actions（`build_type: workflow`），工作流定义在
   [`.github/workflows/deploy-zh-pages.yml`](../.github/workflows/deploy-zh-pages.yml)
-- 触发条件：`main` 分支上 `translations/**`、`assets/**`、`css/**`、`_sass/**`
-  或工作流自身发生变化时自动部署；也可在 Actions 页面手动触发（`workflow_dispatch`）
+- 触发条件：`main` 分支上中文镜像、英文 `_pages/**`（提供回退路径）、共享静态资源、
+  链接检查工具与测试、工作流发生变化时自动部署；也可手动触发（`workflow_dispatch`）
 - 因站点部署在仓库子路径下，`_config.yml` 的 `baseurl` 为 `/gem5-doc-zh`；
   CI 中由 `actions/configure-pages` 输出的 `base_path` 通过 `--baseurl` 覆盖，
   因此更换仓库名或迁移到自定义域名时无需改动配置
@@ -59,32 +68,39 @@ bundle exec jekyll build --destination /tmp/gem5-zh-site
 新增或校验译文时请检查：
 `grep -rn '](/[^/]' translations/zh_CN`（应无输出）。
 
-> 旧版 GitHub Pages 由平台侧构建，不允许自定义插件；本仓库使用 Actions 自建部署，
-> 但仍**未引入任何自定义插件**，保持与官方站点一致的纯 Jekyll 构建。
+本仓库使用 Actions 自建部署，加载 `_plugins/site_links.rb` 处理缺失译文。
+本地 `jekyll build` / `jekyll serve` 使用相同逻辑；不要加 `--safe`，该选项会禁用此插件。
 
 ## 译文状态
 
 | 项目 | 数值 |
 | --- | --- |
-| 英文手写文件总数 | 193（`_pages/` 155 + `_posts/` 33 + 首页/搜索/博客/404） |
+| 英文手写文件总数 | 192（按路径去重：`_pages/` 156 + `_posts/` 33 + 首页/博客/404；搜索已计入 `_pages/`） |
 | 合计词数 | 218,028 |
-| 已完成初译 | 84 个文件，约 8.7 万词（39.9%） |
-| 构建校验 | `jekyll build` 零错误，生成 85 个 HTML 页面 |
+| 已完成初译 | 114 个文件，对应英文 126,630 词（58.1%） |
+| Learning gem5 | 35/35 篇已有译文，本批补齐原先缺少的 31 篇 |
+| 构建校验 | `jekyll build` 零错误，生成 116 个 HTML 页面 |
 | 在线地址 | <https://gevico.github.io/gem5-doc-zh/>（GitHub Actions 自动部署） |
-| 站内链接校验 | 全站 85 个页面，0 处站内绝对链接缺失 `baseurl` |
+| 站内链接校验 | 检查构建后全部 HTML 中的链接与资源目标；存在断链时禁止部署 |
 
 已完成的模块：站点界面（导航 / 页脚 / 首页 / 搜索 / 博客列表 / 404 / 6 个 layout）、
 全部顶层页面（关于、快速开始、提问、参与贡献、项目治理、论文发表、加入 Slack）、
-`documentation/general_docs/` 全部子目录（含 memory_system、cpu_models、
+`documentation/general_docs/` 的主要教程（含 memory_system、cpu_models、
 architecture_support、debugging_and_testing、fullsystem、gpu_models、statistics、
 compiling_workloads 等）、`general_docs/ruby/` 全部 14 篇、
-`gem5-stdlib/` 全部 8 篇。
+`gem5-stdlib/` 全部 8 篇，以及 `learning_gem5/` 全部 35 篇（含 gem5 101 课程练习）。
 
-待完成：`_posts/` 33 篇、`learning_gem5/` 31 篇、`community/events/` 24 篇、
-`gem5art/` 12 篇、GB 级长文 3 篇（`minor_cpu`、`isa_parser`、`x86_microop_isa`）及零星 6 篇。
+待完成：`_posts/` 33 篇、`community/events/` 24 篇、`gem5art/` 12 篇、
+`general_docs/` 7 篇（`minor_cpu`、`isa_parser`、`x86_microop_isa`、
+开发规范等 3 篇及 Kconfig 构建文档）、`community/dev_meetings/` 2 篇。
 
-> **说明**：以上为「初译完成度」，**不等于人工审定完成**。当前译文仅经过结构校验与构建校验，
-> 尚未逐段进行人工语义审校。使用时请以英文原文为准。
+> **说明**：以上为「初译完成度」，**不等于人工审定完成**。本批 Learning gem5 译文主要由 AI
+> 完成，并进行了技术语义复核、代码与输出块比对、构建及站内链接检查；未逐项执行教程实验，
+> 尚未经人工逐段审定。旧版本接口和原文中已确认的不一致以译注明示。
+
+现有 `_meta/manifest.tsv` 是英文源文件清单，不记录译文状态，其中搜索页有一条重复记录；
+上述数量按文件路径去重统计。本批的审校范围与验证记录见
+[Learning gem5 翻译审校记录](../ai-docs/learning-gem5-translation-review.md)。
 
 ## 源文覆盖范围（有意不译的内容）
 
@@ -125,17 +141,36 @@ compiling_workloads 等）、`general_docs/ruby/` 全部 14 篇、
    模板用 `contains '://'` 判断后不再拼接 baseurl —— 顺带修复了上游
    `_includes/header.html` 在小站（`baseurl` 非空）下会把
    `http://doxygen.gem5.org/...` 拼成 `/baseurlhttp://...` 的缺陷。
-8. **上游既有不一致按原文保留**（未修复）：`apis.md` 的 `title` 为 `gem5-resources`、
-   `gem5_memory_syste` 拼写残缺、`O3CPU` permalink 含双斜杠、
-   `/publications/#original-paper` 为死锚点、
-   `ruby/garnet_synthetic_traffic` 链接指向上游并不存在的 `Garnet_standalone.md` 等。
+8. **修正造成 404 的路径错误**：移除 `O3CPU` permalink 的多余斜杠，修正
+   `Garnet_standalone.md`、`Interconnection_Network`、`fullsystem/disk` 等错误链接，
+   并为资源网站补上协议前缀。论文标签页中的下载地址使用相对发布路径，因为
+   YAML 字段经 `markdownify` 输出时不会再次展开字段内的 Liquid 变量。
+9. **其他上游既有不一致仍保留**：例如 `apis.md` 的 `title` 为 `gem5-resources`、
+   `gem5_memory_syste` 拼写残缺及 `/publications/#original-paper` 的死锚点。
 
-### 已知的断链（源于翻译尚未完成，非配置问题）
+### 站内链接与未翻译页面
 
-站点上线后有 45 个站内链接指向**尚未翻译的页面**（英文站存在、中文镜像未生成），
-主要是 `learning_gem5/part1`～`part3`、`learning_gem5/gem5_101`、`events`、
-`dev_meetings`、`gem5art/introduction`、`isa_parser`、`minor_cpu`、`kconfig_build_system` 等。
-这些链接在补齐对应译文后会自动恢复；当前可点页面右上角的 **English** 入口查看英文原文。
+导航数据与正文可以继续引用站内路径。构建插件统一处理渲染后的链接：
+
+- 已有中文页面时，使用该页面实际的 permalink 与当前 `baseurl`。
+- 中文页面尚未完成、但英文源文件已声明对应 permalink 时，链接到官方英文页面，
+  并显示“（英文）”。补齐译文后，下次构建会自动恢复中文链接。
+- 未知路径保持原样，由构建后检查报错；不会把拼写错误自动转移到英文站。
+
+该逻辑同时覆盖导航、正文和页脚。在修改链接时，应按**发布后的页面路径**解析相对地址，
+不能直接使用 Markdown 源文件所在的目录或 `.md` 文件名。
+
+在仓库根目录运行回归测试和构建产物检查：
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 tools/check_site_links.py builds/zh-site --baseurl /gem5-doc-zh
+```
+
+回归测试需要 Ruby、Bundler 以及已安装的中文站点 Gemfile 依赖，覆盖子路径、域名根目录、
+嵌套子路径部署，以及新增译文后恢复站内链接的行为。
+产物检查验证 `href`、`src`、`action`、`poster` 指向的文件是否存在，区分大小写及尾斜杠；
+它不联网验证第三方网站，也不检查段落锚点。CI 在上传部署产物前执行这些检查。
 
 另外，本仓库**未包含**上游以下两项，原因见括号：
 
@@ -146,7 +181,8 @@ compiling_workloads 等）、`general_docs/ruby/` 全部 14 篇、
 
 ## 续译方式
 
-1. 用 `_meta/make_manifest.py` 生成 / 刷新清单，对照 `_meta/manifest.tsv` 取下一个待译文件。
+1. 对照 `_meta/manifest.tsv` 取下一个待译文件；需要重新统计时，用 `_meta/make_manifest.py`
+   从仓库内的固定英文基线生成清单。
 2. 英文原文在同名相对路径的仓库根目录下；译文写到 `translations/zh_CN/<完全相同的相对路径>`。
 3. 文档页 front matter 约定：
    - `title`：按上述术语约定书写，并与 `_meta/nav_zh.tsv` 中对应条目保持一致；

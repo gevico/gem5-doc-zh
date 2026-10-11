@@ -150,7 +150,7 @@ board.set_workload(workload)
 你可以在 gem5 Resources 网站上该工作负载页面的 [Raw](https://resources.gem5.org/resources/x86-ubuntu-24.04-boot-with-systemd/raw?database=gem5-resources&version=3.0.0) 标签页下看到这些细节。
 
 你也可以用 `set_kernel_disk_workload()` 代替 `set_workload()`，分别设置磁盘镜像和内核资源。
-当你想使用自己的资源，或在[gem5 resources 网站](resources.gem5.org)上未作为工作负载提供的资源组合时，可以使用它。
+当你想使用自己的资源，或在[gem5 resources 网站](https://resources.gem5.org/)上未作为工作负载提供的资源组合时，可以使用它。
 
 **注意：如果用户希望使用自己的资源（即不是作为 gem5-resources 一部分预构建的资源），可以参阅[此处](../general_docs/gem5_resources)的教程。[2024 gem5 bootcamp 网站](https://bootcamp.gem5.org/#02-Using-gem5/02-gem5-resources)上也有相关教程**
 

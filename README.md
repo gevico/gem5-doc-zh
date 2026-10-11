@@ -4,7 +4,8 @@
 > `stable` 分支（提交 `07ebfaf9bb1a0a4be2b822f3a4cf95abf20e4a4e`），在其之上增加了
 > gem5 官方网站的中文翻译。中文译文位于 [`translations/zh_CN/`](translations/zh_CN/)，
 > 术语表与构建说明见 [`translations/README.md`](translations/README.md)。
-> 仓库根目录下的英文内容为原样保留的上游基线。
+> 仓库根目录下的英文内容为原样保留的上游基线。本项目以该提交的官方文档为固定快照，
+> 后续工作以补齐中文译文和修正本地问题为目标，不持续同步上游版本。
 >
 > **在线站点**：<https://gevico.github.io/gem5-doc-zh/>
 > （由 [`.github/workflows/deploy-zh-pages.yml`](.github/workflows/deploy-zh-pages.yml)
@@ -18,8 +19,8 @@
 > bundle exec jekyll serve    # http://127.0.0.1:4000/gem5-doc-zh/
 > ```
 >
-> 中文译文仅完成初译与构建校验，尚未经过人工语义审校，使用时请以
-> [www.gem5.org](https://www.gem5.org/) 英文原文为准。
+> 中文译文已完成初译与构建校验，尚未经人工逐段审定；核对语义时请参照
+> [固定基线的英文原文](https://github.com/gem5/website/tree/07ebfaf9bb1a0a4be2b822f3a4cf95abf20e4a4e)。
 
 The website for gem5 is written in
 [Jekyll markdown](https://jekyllrb.com/docs/configuration/markdown/).

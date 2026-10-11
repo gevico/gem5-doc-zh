@@ -92,31 +92,31 @@ ISA Parser	ISA 解析器（ISA parser）
 X86 microop ISA	x86 微操作 ISA（x86 microop ISA）
 Building gem5	构建 gem5
 Creating a simple configuration script	创建简单的配置脚本
-Adding cache to configuration script	为配置脚本添加缓存
+Adding cache to configuration script	为配置脚本添加缓存（cache）
 Understanding gem5 statistics and output	理解 gem5 的统计信息与输出
 Using the default configuration scripts	使用默认配置脚本
 Extending gem5 for ARM	为 ARM 扩展 gem5
 Setting up your development environment	搭建开发环境
 Creating a very simple SimObject	创建一个非常简单的 SimObject
 Debugging gem5	调试 gem5
-Event-driven programming	事件驱动编程（event-driven programming）
-Adding parameters to SimObjects and more events	为 SimObject 添加参数以及更多事件
-Creating SimObjects in the memory system	在内存系统中创建 SimObject（memory system）
-Creating a simple cache object	创建简单的缓存对象（cache object）
+Event-driven programming	事件驱动（event-driven）编程
+Adding parameters to SimObjects and more events	为 SimObject 添加参数（parameter）与更多事件
+Creating SimObjects in the memory system	在内存系统（memory system）中创建 SimObject
+Creating a simple cache object	创建简单的缓存（cache）对象
 ARM Power Modelling	ARM 功耗建模
 ARM DVFS Support	ARM DVFS 支持
 Introduction to Ruby	Ruby 简介
-MSI example cache protocol	MSI 示例缓存协议
-Declaring a state machine	声明状态机
-In port code blocks	in 端口代码块
-Action code blocks	action 代码块
-Transition code blocks	transition 代码块
+MSI example cache protocol	MSI 缓存一致性（cache coherence）协议（protocol）示例
+Declaring a state machine	声明状态机（state machine）
+In port code blocks	输入端口（port）代码块
+Action code blocks	动作代码块
+Transition code blocks	状态转换代码块
 MSI Directory implementation	MSI 目录实现
-Compiling a SLICC protocol	编译 SLICC 协议
+Compiling a SLICC protocol	编译 SLICC 协议（protocol）
 Configuring a simple Ruby system	配置简单的 Ruby 系统
 Running the simple Ruby system	运行简单的 Ruby 系统
-Debugging SLICC Protocols	调试 SLICC 协议
-Configuring for a standard protocol	为标准协议进行配置
+Debugging SLICC Protocols	调试 SLICC 协议（protocol）
+Configuring for a standard protocol	配置现有协议（protocol）
 Homework 1	作业 1
 Homework 2	作业 2
 Homework 3	作业 3

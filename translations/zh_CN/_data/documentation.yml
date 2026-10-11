@@ -270,7 +270,7 @@ docs:
           url: /documentation/learning_gem5/part1/building
         - page: 创建简单的配置脚本
           url: /documentation/learning_gem5/part1/simple_config
-        - page: 为配置脚本添加缓存
+        - page: 为配置脚本添加缓存（cache）
           url: /documentation/learning_gem5/part1/cache_config
         - page: 理解 gem5 的统计信息与输出
           url: /documentation/learning_gem5/part1/gem5_stats
@@ -288,13 +288,13 @@ docs:
           url: /documentation/learning_gem5/part2/helloobject
         - page: 调试 gem5
           url: /documentation/learning_gem5/part2/debugging
-        - page: 事件驱动编程（event-driven programming）
+        - page: 事件驱动（event-driven）编程
           url: /documentation/learning_gem5/part2/events
-        - page: 为 SimObject 添加参数以及更多事件
+        - page: 为 SimObject 添加参数（parameter）与更多事件
           url: /documentation/learning_gem5/part2/parameters
-        - page: 在内存系统中创建 SimObject（memory system）
+        - page: 在内存系统（memory system）中创建 SimObject
           url: /documentation/learning_gem5/part2/memoryobject
-        - page: 创建简单的缓存对象（cache object）
+        - page: 创建简单的缓存（cache）对象
           url: /documentation/learning_gem5/part2/simplecache
         - page: ARM 功耗建模
           url: /documentation/learning_gem5/part2/arm_power_modelling
@@ -306,27 +306,27 @@ docs:
       subitems:
         - page: Ruby 简介
           url: /documentation/learning_gem5/part3/MSIintro
-        - page: MSI 示例缓存协议
+        - page: MSI 缓存一致性（cache coherence）协议（protocol）示例
           url: /documentation/learning_gem5/part3/cache-intro
-        - page: 声明状态机
+        - page: 声明状态机（state machine）
           url: /documentation/learning_gem5/part3/cache-declarations
-        - page: in 端口代码块
+        - page: 输入端口（port）代码块
           url: /documentation/learning_gem5/part3/cache-in-ports
-        - page: action 代码块
+        - page: 动作代码块
           url: /documentation/learning_gem5/part3/cache-actions
-        - page: transition 代码块
+        - page: 状态转换代码块
           url: /documentation/learning_gem5/part3/cache-transitions
         - page: MSI 目录实现
           url: /documentation/learning_gem5/part3/directory
-        - page: 编译 SLICC 协议
+        - page: 编译 SLICC 协议（protocol）
           url: /documentation/learning_gem5/part3/MSIbuilding
         - page: 配置简单的 Ruby 系统
           url: /documentation/learning_gem5/part3/configuration
         - page: 运行简单的 Ruby 系统
           url: /documentation/learning_gem5/part3/running
-        - page: 调试 SLICC 协议
+        - page: 调试 SLICC 协议（protocol）
           url: /documentation/learning_gem5/part3/MSIdebugging
-        - page: 为标准协议进行配置
+        - page: 配置现有协议（protocol）
           url: /documentation/learning_gem5/part3/simple-MI_example
     - title: gem5 101
       id: gem5_101

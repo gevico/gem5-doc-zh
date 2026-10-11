@@ -23,7 +23,7 @@ Ruby 为内存子系统实现了一个详细的模拟模型。它建模包含性
 Ruby 中主要组件的高层视图。
 ![ruby_overview.jpg]({{ site.baseurl }}/assets/img/Ruby_overview.jpg)
 
-关于以教程方式学习 Ruby，请参见 [Learning gem5 第三部分]({{ site.baseurl }}/documentation/learning_gem5/part3/)
+关于以教程方式学习 Ruby，请参见 [Learning gem5 第三部分]({{ site.baseurl }}/documentation/learning_gem5/part3/MSIintro/)
 
 ### SLICC + 一致性协议：
 
@@ -78,7 +78,7 @@ Implementing Cache Coherence* 的缩写。它是一种领域特定语言，用�
 4.  **路由器微架构**
 
 ***关于网络模型实现的更多细节描述见
-[此处](Interconnection_Network)。***
+[此处]({{ site.baseurl }}/documentation/general_docs/ruby/interconnection-network/)。***
 
 另一种选择是用外部模拟器 [TOPAZ](https://github.com/ceunican/tpzsimul) 替换互连网络。该
 模拟器可以直接在 gem5 中运行，并在原始 ruby 网络模拟器的基础上增加了

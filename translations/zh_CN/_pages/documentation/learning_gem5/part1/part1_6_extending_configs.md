@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Extending gem5 for ARM
+title: 为 ARM 扩展 gem5
 doc: 学习 gem5
 parent: part1
 permalink: /documentation/learning_gem5/part1/extending_configs
